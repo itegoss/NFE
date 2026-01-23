@@ -3,326 +3,907 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NewFire | Firefighter Department</title>
+  <title>NEWFIRE | Fire Protection & Safety</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <header class="site-header" id="top">
-    
-    <div class="nav-wrap">
-      <div class="container nav-inner">
-        <div class="brand">New<span>Fire</span></div>
-        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-        <nav class="main-nav">
-          <a href="#hero">Home</a>
-          <a href="#snapshot">About Us</a>
-          <a href="#products">Products</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#projects">Projects</a>
-          <a href="#media">Media</a>
-          <a href="#careers">Careers</a>
-          <a href="#contact">Contact Us</a>
-          <a class="cta" href="#contact">Get a Quote</a>
-        </nav>
+  <header class="hero">
+    <nav class="nav" id="nav">
+      <div class="nav__logo">NEWFIRE</div>
+      <ul class="nav__links" id="navLinks">
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Company <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--simple">
+            <a href="#about">About New Fire</a>
+            <a href="#leadership">Leadership Team</a>
+            <a href="#legacy">Legacy &amp; Milestones</a>
+            <a href="#ethics">Quality, Safety &amp; Ethics</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Solutions <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--solutions">
+            <div class="nav__parent-col">
+              <button class="nav__parent" data-target="solutions-detection">Fire Detection</button>
+              <button class="nav__parent" data-target="solutions-suppression">Fire Suppression</button>
+              <button class="nav__parent" data-target="solutions-protection">Fire Protection</button>
+              <button class="nav__parent" data-target="solutions-portable">Portable &amp; First Response</button>
+              <button class="nav__parent" data-target="solutions-turnkey">Integrated Turnkey Fire Engineering</button>
+            </div>
+            <div class="nav__submenu-panel">
+              <div class="nav__submenu" id="solutions-detection">
+                <p class="nav__label">Fire Detection</p>
+                <a href="#detection">Conventional &amp; Addressable Systems</a>
+                <a href="#vesda">Early Smoke Detection (VESDA)</a>
+                <a href="#panels">Intelligent Alarm &amp; Control Panels</a>
+              </div>
+              <div class="nav__submenu" id="solutions-suppression">
+                <p class="nav__label">Fire Suppression</p>
+                <a href="#gas">Gas &amp; Clean Agent Systems</a>
+                <a href="#mist">Water Mist Systems</a>
+                <a href="#foam">Foam &amp; Special Hazard Suppression</a>
+                <a href="#kitchen">Kitchen &amp; Electrical Fire Solutions</a>
+              </div>
+              <div class="nav__submenu" id="solutions-protection">
+                <p class="nav__label">Fire Protection</p>
+                <a href="#hydrant">Hydrant Systems</a>
+                <a href="#sprinkler">Sprinkler Systems</a>
+                <a href="#monitors">Monitors, Valves &amp; Accessories</a>
+                <a href="#foam-chambers">Foam Chambers &amp; Rimseal Protection</a>
+              </div>
+              <div class="nav__submenu" id="solutions-portable">
+                <p class="nav__label">Portable &amp; First Response</p>
+                <a href="#extinguishers">Fire Extinguishers</a>
+                <a href="#hoses">Hoses, Nozzles &amp; Cabinets</a>
+                <a href="#emergency">Emergency &amp; Safety Accessories</a>
+              </div>
+              <div class="nav__submenu" id="solutions-turnkey">
+                <p class="nav__label">Integrated Turnkey Fire Engineering</p>
+                <a href="#design">Design to Deployment</a>
+                <a href="#end-to-end">End-to-End Fire Safety Solutions</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Industries <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#oil">Oil, Gas &amp; Energy</a>
+            <a href="#manufacturing">Manufacturing &amp; Industrial Plants</a>
+            <a href="#commercial">Commercial &amp; High-Rise Buildings</a>
+            <a href="#data">Data Centres &amp; IT Infrastructure</a>
+            <a href="#healthcare">Healthcare &amp; Pharmaceuticals</a>
+            <a href="#infrastructure">Infrastructure &amp; Public Utilities</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Engineering &amp; Services <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#risk">Risk Assessment &amp; Fire Modelling</a>
+            <a href="#system-design">System Design &amp; Engineering</a>
+            <a href="#installation">Installation &amp; Execution</a>
+            <a href="#testing">Testing, Commissioning &amp; Handover</a>
+            <a href="#maintenance">AMC, Maintenance &amp; Retrofits</a>
+            <a href="#training">Training &amp; Fire Safety Audits</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Capability &amp; Proof <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#projects">Projects &amp; Case Studies</a>
+            <a href="#certifications">Certifications &amp; Compliance</a>
+            <a href="#manufacturing">Manufacturing &amp; Infrastructure</a>
+            <a href="#partners">Technology Partners</a>
+            <a href="#testimonials">Clients &amp; Testimonials</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Knowledge Hub <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--simple">
+            <a href="#blog">Fire Safety Insights (Blog)</a>
+            <a href="#downloads">Technical Datasheets &amp; Downloads</a>
+            <a href="#codes">Codes, Standards &amp; Approvals</a>
+            <a href="#faqs">FAQs</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Contact Us</button>
+        
+        </li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--primary" href="#quote">Get a Quote</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div>
+    </nav>
+
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content" id="home">
+      <div class="hero__grid">
+        <div class="hero__left">
+          <div class="hero__badge">
+            <span class="hero__badge-icon"></span>
+            <span class="hero__badge-text">Fire Protection Excellence</span>
+          </div>
+          <h1 class="hero__title">Stop fires before<br>they stop <span class="hero__title-highlight">you</span></h1>
+          <p class="hero__subtitle">Design, install, and maintain fire systems that stay ready when lives and uptime are on the line. Your safety is our mission.</p>
+
+          <div class="hero__cta-wrapper">
+            <a class="hero__cta-button" href="#quote">
+              <span class="hero__cta-text">Get Started Today</span>
+              <span class="hero__cta-icon">→</span>
+            </a>
+            <div class="hero__cta-subtext">
+              <span>✓ Free Consultation</span>
+              <span>✓ 24/7 Support</span>
+            </div>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat-item">
+              <span class="hero__stat-number">300+</span>
+              <span class="hero__stat-label">Facilities Protected</span>
+            </div>
+            <div class="hero__stat-item">
+              <span class="hero__stat-number">24/7</span>
+              <span class="hero__stat-label">Emergency Response</span>
+            </div>
+            <div class="hero__stat-item">
+              <span class="hero__stat-number">93%</span>
+              <span class="hero__stat-label">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
   </header>
 
+  <section class="snapshot" id="about">
+    <div class="snapshot__container">
+      <div class="snapshot__band">
+        <div class="snapshot__item">
+          <div class="snapshot__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7V12C2 16.55 5.84 20.74 12 22C18.16 20.74 22 16.55 22 12V7L12 2ZM12 11H20C19.74 14.73 17.24 17.9 12 19.72V11H4V8.46L12 4.64V11Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="snapshot__content">
+            <span class="snapshot__value">300</span>
+            <span class="snapshot__label">Facilities served</span>
+          </div>
+        </div>
+        
+        <div class="snapshot__item">
+          <div class="snapshot__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="snapshot__content">
+            <span class="snapshot__value">93%</span>
+            <span class="snapshot__label">Trusted client score</span>
+          </div>
+        </div>
+        
+        <div class="snapshot__item">
+          <div class="snapshot__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="snapshot__content">
+            <span class="snapshot__value">150</span>
+            <span class="snapshot__label">Trained staff</span>
+          </div>
+        </div>
+        
+        <div class="snapshot__item">
+          <div class="snapshot__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="snapshot__content">
+            <span class="snapshot__value">25</span>
+            <span class="snapshot__label">Years experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section class="hero" id="hero">
-      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1600&q=70">
-        <source src="https://cdn.coverr.co/videos/coverr-firefighters-in-action-8473/1080p.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <p class="eyebrow">Integrated Fire Protection</p>
-          <h1>Complete Fire Protection &amp; Safety Solutions</h1>
-          <p class="subhead">Engineering, Installation &amp; Maintenance of Fire Safety Systems for high-stakes facilities across India.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Get a Quote</a>
-            <a class="btn ghost" href="tel:+912243511500">Call Now</a>
-            <a class="btn ghost" href="https://wa.me/919999999999" target="_blank" rel="noreferrer">WhatsApp Chat</a>
+    <section class="highlights services" id="services">
+      <div class="section__header service__header">
+        <p class="eyebrow">Services</p>
+        <h2>End-to-End Protection, One Partner</h2>
+        <p class="section__sub">A single accountable team from hazard study to handover to AMC, keeping your facilities compliant and always-on.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card service-card--design" data-service="1">
+          <div class="service-card__number">01</div>
+          <div class="service-card__glow service-card__glow--red"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.4 6L14 4H5V21H7V14H12.6L13 16H20V6H14.4Z" fill="currentColor"/>
+            </svg>
           </div>
-          <div class="hero-stats">
-            <div>
-              <p class="label">Trusted Since</p>
-              <p class="value">2008</p>
-            </div>
-            <div>
-              <p class="label">Projects Delivered</p>
-              <p class="value">650+</p>
-            </div>
-            <div>
-              <p class="label">PAN India Presence</p>
-              <p class="value">20+ Cities</p>
-            </div>
+          <div class="service-card__content">
+            <span class="service-card__tag">Blueprint & code</span>
+            <h3>Design & Engineering</h3>
+            <p>Risk assessments, hydraulic calculations, and compliant schematics tailored to your occupancy and hazard class.</p>
           </div>
-        </div>
-        <div class="hero-bullets" aria-label="Key services">
-          <div class="bullet">Fire Alarm &amp; Detection</div>
-          <div class="bullet">Sprinkler &amp; Hydrant Systems</div>
-          <div class="bullet">Suppression &amp; Gas Systems</div>
-          <div class="bullet">AMC &amp; Rapid Response</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="brand-ribbon" aria-label="Trusted partners">
-      <div class="container ribbon-track">
-        <span>ISO 9001</span>
-        <span>UL Listed</span>
-        <span>FM Approved</span>
-        <span>Govt. Empanelled</span>
-        <span>NFPA Aligned</span>
-        <span>Make In India</span>
-      </div>
-    </section>
-
-    <section class="snapshot" id="snapshot">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Company Snapshot</p>
-          <h2>Proof you can trust in 5 seconds</h2>
-        </div>
-        <a class="link" href="#contact">Get a Quote →</a>
-      </div>
-      <div class="container snapshot-grid">
-        <div class="snap-card"><span>15+</span><p>Years of Experience</p></div>
-        <div class="snap-card"><span>650+</span><p>Projects Completed</p></div>
-        <div class="snap-card"><span>500+</span><p>Happy Clients</p></div>
-        <div class="snap-card"><span>PAN India</span><p>Presence &amp; Service</p></div>
-        <div class="snap-card"><span>Certified</span><p>Approved Systems</p></div>
+          <div class="service-card__shine"></div>
+        </article>
+        
+        <article class="service-card service-card--install" data-service="2">
+          <div class="service-card__number">02</div>
+          <div class="service-card__glow service-card__glow--blue"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="service-card__content">
+            <span class="service-card__tag">Build & handover</span>
+            <h3>Installation & Commissioning</h3>
+            <p>Project-managed delivery with certified technicians, factory-authorized start-up, and integrated acceptance testing.</p>
+          </div>
+          <div class="service-card__shine"></div>
+        </article>
+        
+        <article class="service-card service-card--monitor" data-service="3">
+          <div class="service-card__number">03</div>
+          <div class="service-card__glow service-card__glow--grey"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="service-card__content">
+            <span class="service-card__tag">Monitor & improve</span>
+            <h3>Maintenance & Monitoring</h3>
+            <p>Planned AMC, remote monitoring, and rapid-response service teams to keep uptime high and compliance continuous.</p>
+          </div>
+          <div class="service-card__shine"></div>
+        </article>
       </div>
     </section>
 
     <section class="products" id="products">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Our Products</p>
-          <h2>Engineered protection for every risk</h2>
-        </div>
-        <a class="link" href="#contact">View all products →</a>
+      <div class="products__header">
+        <p class="eyebrow">Our Full Spectrum</p>
+        <h2>Fire Solutions</h2>
+        <p class="products__subtitle">Complete protection systems engineered for every scenario</p>
       </div>
-      <div class="container card-grid">
-        <article class="card">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80');"></div>
-          <div class="card-body">
-            <h3>Fire Alarm Systems</h3>
-            <p>Addressable and conventional detection tailored to complex facilities.</p>
-            <a class="link" href="#contact">View Details</a>
+      
+      <div class="products__grid">
+        <article class="product-card" data-product="1">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8C28 8 24 12 24 16V20H20C18 20 16 22 16 24V52C16 54 18 56 20 56H44C46 56 48 54 48 52V24C48 22 46 20 44 20H40V16C40 12 36 8 32 8ZM28 16C28 14 30 12 32 12C34 12 36 14 36 16V20H28V16ZM32 40C30 40 28 38 28 36C28 34 30 32 32 32C34 32 36 34 36 36C36 38 34 40 32 40Z" fill="currentColor"/>
+              <circle cx="32" cy="36" r="2" fill="currentColor"/>
+            </svg>
           </div>
+          <h3>Fire Extinguishers</h3>
+          <p>Portable fire suppression units for immediate response</p>
+          <div class="product-card__badge">Certified</div>
         </article>
-        <article class="card">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80');"></div>
-          <div class="card-body">
-            <h3>Fire Sprinkler Systems</h3>
-            <p>Hydrant, sprinkler, and pump solutions compliant with NFPA/IS standards.</p>
-            <a class="link" href="#contact">View Details</a>
+
+        <article class="product-card" data-product="2">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <rect x="24" y="20" width="6" height="6" fill="currentColor"/>
+              <rect x="34" y="20" width="6" height="6" fill="currentColor"/>
+              <rect x="24" y="30" width="6" height="6" fill="currentColor"/>
+              <rect x="34" y="30" width="6" height="6" fill="currentColor"/>
+              <path d="M20 40H44" stroke="currentColor" stroke-width="3"/>
+            </svg>
           </div>
+          <h3>In-Panel Fire Suppression</h3>
+          <p>Integrated cabinet and electrical room protection</p>
+          <div class="product-card__badge">Smart</div>
         </article>
-        <article class="card">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');"></div>
-          <div class="card-body">
-            <h3>Fire Suppression Systems</h3>
-            <p>Clean agent, CO₂, and foam systems for mission-critical assets.</p>
-            <a class="link" href="#contact">View Details</a>
+
+        <article class="product-card" data-product="3">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="28" width="40" height="16" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <rect x="18" y="32" width="28" height="8" rx="1" fill="currentColor"/>
+              <path d="M24 20V28M32 16V28M40 20V28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="36" r="2" fill="#fff"/>
+              <circle cx="32" cy="36" r="2" fill="#fff"/>
+              <circle cx="40" cy="36" r="2" fill="#fff"/>
+            </svg>
           </div>
+          <h3>Kitchen Fire Suppression</h3>
+          <p>Automatic systems for commercial kitchen protection</p>
+          <div class="product-card__badge">Auto</div>
         </article>
-        <article class="card">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1508873699372-7aeab60b44ab?auto=format&fit=crop&w=800&q=80');"></div>
-          <div class="card-body">
-            <h3>Fire Extinguishers</h3>
-            <p>Portable and trolley units with training and annual maintenance.</p>
-            <a class="link" href="#contact">View Details</a>
+
+        <article class="product-card" data-product="4">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 48C38 48 44 42 44 36C44 30 38 24 32 24C26 24 20 30 20 36C20 42 26 48 32 48Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 12V20M32 44V52M12 32H20M44 32H52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M18 18L24 24M40 24L46 18M18 46L24 40M40 40L46 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
           </div>
+          <h3>Total Flooding Systems</h3>
+          <p>Complete room suppression with gas agents</p>
+          <div class="product-card__badge">Advanced</div>
         </article>
-        <article class="card">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80');"></div>
-          <div class="card-body">
-            <h3>Detection &amp; Control Panels</h3>
-            <p>Smart panels with remote monitoring, alerts, and compliance reporting.</p>
-            <a class="link" href="#contact">View Details</a>
+
+        <article class="product-card" data-product="5">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 16L28 32L32 40L36 32L32 16Z" fill="currentColor"/>
+              <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 8V16M32 48V56M8 32H16M48 32H56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
           </div>
+          <h3>Automatic Firefighters</h3>
+          <p>Self-activating fire suppression technology</p>
+          <div class="product-card__badge">Automatic</div>
+        </article>
+
+        <article class="product-card" data-product="6">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="20" width="24" height="32" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 30V36M32 36L36 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="28" y="16" width="8" height="4" rx="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Hydrants</h3>
+          <p>Outdoor and indoor hydrant systems for firefighting</p>
+          <div class="product-card__badge">Essential</div>
+        </article>
+
+        <article class="product-card" data-product="7">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="26" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 36C32 36 24 44 24 50C24 54 28 58 32 58C36 58 40 54 40 50C40 44 32 36 32 36Z" fill="currentColor"/>
+              <path d="M26 20L32 8L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Alarm Solutions</h3>
+          <p>Advanced detection and notification systems</p>
+          <div class="product-card__badge">Smart</div>
+        </article>
+
+        <article class="product-card" data-product="8">
+          <div class="product-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 12C24 12 18 18 18 26C18 34 24 40 32 40C40 40 46 34 46 26C46 18 40 12 32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M28 26L31 29L37 23" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 42L20 54H44L42 42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Services</h3>
+          <p>Installation, maintenance and compliance solutions</p>
+          <div class="product-card__badge">Support</div>
         </article>
       </div>
     </section>
 
-    <section class="industries" id="solutions">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Industry Applications</p>
-          <h2>Built for your environment</h2>
-        </div>
-        <a class="link" href="#contact">Talk to an expert →</a>
+    <section class="industries" id="industries">
+      <div class="industries__header">
+        <p class="eyebrow">Industry Applications</p>
+        <h2>Protection Across<br>Every Sector</h2>
+        <p class="industries__subtitle">Specialized fire safety solutions tailored to your industry's unique challenges</p>
       </div>
-      <div class="container card-grid narrow">
-        <article class="card mini"><h3>Manufacturing Units</h3><p>Process risk analysis and heavy-duty suppression.</p></article>
-        <article class="card mini"><h3>Data Centers</h3><p>Clean agent solutions that protect uptime.</p></article>
-        <article class="card mini"><h3>Oil &amp; Gas</h3><p>High-hazard foam and gas suppression.</p></article>
-        <article class="card mini"><h3>Warehouses &amp; Logistics</h3><p>High-rack sprinkler design and hydrant networks.</p></article>
-        <article class="card mini"><h3>Commercial Buildings</h3><p>Integrated alarms, PA, and evacuation systems.</p></article>
-        <article class="card mini"><h3>Hospitals &amp; Healthcare</h3><p>Life safety systems with zero downtime deployment.</p></article>
-      </div>
-    </section>
 
-    <section class="why" id="why">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Why Choose NewFire</p>
-          <h2>Engineers first, vendors second</h2>
-        </div>
-      </div>
-      <div class="container why-grid">
-        <div class="why-item">Experienced Fire Safety Engineers</div>
-        <div class="why-item">Approved &amp; Certified Products</div>
-        <div class="why-item">End-to-End Turnkey Solutions</div>
-        <div class="why-item">Reliable AMC &amp; Maintenance</div>
-        <div class="why-item">Quick Response &amp; Support</div>
-      </div>
-    </section>
-
-    <section class="certs" id="certifications">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Certifications &amp; Approvals</p>
-          <h2>Compliance you can rely on</h2>
-        </div>
-      </div>
-      <div class="container cert-row">
-        <div class="cert">ISO</div>
-        <div class="cert">UL</div>
-        <div class="cert">FM</div>
-        <div class="cert">Govt. Approved</div>
-        <div class="cert">NFPA</div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Projects Highlight</p>
-          <h2>Delivered across industries</h2>
-        </div>
-        <div class="filters">
-          <button class="chip active">All</button>
-          <button class="chip">Industrial</button>
-          <button class="chip">Data Centers</button>
-          <button class="chip">Commercial</button>
-        </div>
-      </div>
-      <div class="container card-grid">
-        <article class="card project">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80');"></div>
-          <div class="card-body">
-            <h3>Hydrant &amp; Sprinkler System</h3>
-            <p>Logistics hub, Mumbai — Full hydrant, sprinkler, and pump room commissioning.</p>
+      <div class="industries__grid">
+        <article class="industry-card" data-industry="1">
+          <div class="industry-card__bg"></div>
+          <div class="industry-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 48H48V52H16V48Z" fill="currentColor"/>
+              <path d="M20 44H44V48H20V44Z" fill="currentColor"/>
+              <path d="M24 12H40V44H24V12Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <rect x="28" y="18" width="3" height="3" fill="currentColor"/>
+              <rect x="33" y="18" width="3" height="3" fill="currentColor"/>
+              <rect x="28" y="24" width="3" height="3" fill="currentColor"/>
+              <rect x="33" y="24" width="3" height="3" fill="currentColor"/>
+              <rect x="28" y="30" width="3" height="3" fill="currentColor"/>
+              <rect x="33" y="30" width="3" height="3" fill="currentColor"/>
+              <rect x="28" y="36" width="8" height="6" fill="currentColor"/>
+            </svg>
           </div>
+          <div class="industry-card__content">
+            <h3>Oil, Gas & Energy</h3>
+            <p>Foam systems, deluge protection, and hazardous area safety</p>
+          </div>
+          <div class="industry-card__number">01</div>
         </article>
-        <article class="card project">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80');"></div>
-          <div class="card-body">
-            <h3>Clean Agent Suppression</h3>
-            <p>Tier-III Data Center — Inergen system with early warning detection.</p>
+
+        <article class="industry-card" data-industry="2">
+          <div class="industry-card__bg"></div>
+          <div class="industry-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 32L32 12L52 32V52H12V32Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <rect x="26" y="38" width="12" height="14" fill="currentColor"/>
+              <rect x="18" y="24" width="6" height="6" fill="currentColor"/>
+              <rect x="40" y="24" width="6" height="6" fill="currentColor"/>
+              <path d="M12 32H52" stroke="currentColor" stroke-width="2"/>
+            </svg>
           </div>
+          <div class="industry-card__content">
+            <h3>Manufacturing & Industrial Plants</h3>
+            <p>Sprinkler systems, detection, and process safety integration</p>
+          </div>
+          <div class="industry-card__number">02</div>
         </article>
-        <article class="card project">
-          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80');"></div>
-          <div class="card-body">
-            <h3>Foam &amp; Gas Systems</h3>
-            <p>Oil &amp; Gas terminal — High-expansion foam and CO₂ integration.</p>
+
+        <article class="industry-card" data-industry="3">
+          <div class="industry-card__bg"></div>
+          <div class="industry-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="16" width="40" height="36" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M12 26H52" stroke="currentColor" stroke-width="3"/>
+              <rect x="20" y="32" width="8" height="6" fill="currentColor"/>
+              <rect x="36" y="32" width="8" height="6" fill="currentColor"/>
+              <rect x="20" y="40" width="8" height="6" fill="currentColor"/>
+              <rect x="36" y="40" width="8" height="6" fill="currentColor"/>
+              <path d="M28 8L32 16L36 8" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
           </div>
+          <div class="industry-card__content">
+            <h3>Commercial & High-Rise Buildings</h3>
+            <p>Fire alarm systems, sprinklers, and emergency evacuation</p>
+          </div>
+          <div class="industry-card__number">03</div>
+        </article>
+
+        <article class="industry-card" data-industry="4">
+          <div class="industry-card__bg"></div>
+          <div class="industry-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="20" width="32" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M24 28H40M24 34H40M24 40H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="14" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M32 18V20" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="industry-card__content">
+            <h3>Data Centres & IT Infrastructure</h3>
+            <p>Clean agent suppression, VESDA, and precision cooling protection</p>
+          </div>
+          <div class="industry-card__number">04</div>
+        </article>
+
+        <article class="industry-card" data-industry="5">
+          <div class="industry-card__bg"></div>
+          <div class="industry-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8L28 16H36L32 8Z" fill="currentColor"/>
+              <circle cx="32" cy="28" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M28 28H36M32 24V32" stroke="currentColor" stroke-width="2"/>
+              <rect x="20" y="42" width="24" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M26 47H38" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="industry-card__content">
+            <h3>Healthcare & Pharmaceuticals</h3>
+            <p>Life safety systems, clean rooms, and regulatory compliance</p>
+          </div>
+          <div class="industry-card__number">05</div>
+        </article>
+
+        
+      </div>
+    </section>
+
+    <section class="why-choose" id="why-choose">
+      <div class="why-choose__header">
+        <p class="eyebrow">Why Choose NewFire</p>
+        <h2>Your Trusted Fire<br>Safety Partner</h2>
+        <p class="why-choose__subtitle">Excellence in fire protection backed by expertise, certification, and unwavering support</p>
+      </div>
+
+      <div class="why-choose__grid">
+        <article class="why-choose-card" data-reason="1">
+          <div class="why-choose-card__glow"></div>
+          <div class="why-choose-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 30C24 30 18 34 18 40V48H46V40C46 34 40 30 32 30Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M22 52L20 56H44L42 52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="20" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="why-choose-card__content">
+            <h3>Experienced Fire Safety Engineers</h3>
+            <p>Certified professionals with years of expertise in designing and implementing fire protection systems</p>
+          </div>
+          <div class="why-choose-card__arrow">→</div>
+          <div class="bottom-accent"></div>
+        </article>
+
+        <article class="why-choose-card" data-reason="2">
+          <div class="why-choose-card__glow"></div>
+          <div class="why-choose-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M24 22L30 28L40 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 36H42M22 42H42M22 48H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="why-choose-card__content">
+            <h3>Approved & Certified Products</h3>
+            <p>FM, UL, and NFPA certified equipment ensuring compliance with international safety standards</p>
+          </div>
+          <div class="why-choose-card__arrow">→</div>
+          <div class="bottom-accent"></div>
+        </article>
+
+        <article class="why-choose-card" data-reason="3">
+          <div class="why-choose-card__glow"></div>
+          <div class="why-choose-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="22" width="40" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M20 22V18C20 14 24 12 28 12H36C40 12 44 14 44 18V22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="32" cy="36" r="4" fill="currentColor"/>
+              <path d="M22 32L42 32M22 40L42 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="why-choose-card__content">
+            <h3>End-to-End Turnkey Solutions</h3>
+            <p>Complete project lifecycle management from design and installation to commissioning and handover</p>
+          </div>
+          <div class="why-choose-card__arrow">→</div>
+          <div class="bottom-accent"></div>
+        </article>
+
+        <article class="why-choose-card" data-reason="4">
+          <div class="why-choose-card__glow"></div>
+          <div class="why-choose-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M32 14V32L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 12L16 8M44 12L48 8M20 52L16 56M44 52L48 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="why-choose-card__content">
+            <h3>Reliable AMC & Maintenance</h3>
+            <p>Scheduled inspections, preventive maintenance, and comprehensive annual maintenance contracts</p>
+          </div>
+          <div class="why-choose-card__arrow">→</div>
+          <div class="bottom-accent"></div>
+        </article>
+
+        <article class="why-choose-card" data-reason="5">
+          <div class="why-choose-card__glow"></div>
+          <div class="why-choose-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 12L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <circle cx="32" cy="26" r="4" fill="currentColor"/>
+              <path d="M32 46V52M26 50L32 52L38 50" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="why-choose-card__content">
+            <h3>Quick Response & Support</h3>
+            <p>24/7 emergency response team and dedicated support hotline for immediate assistance</p>
+          </div>
+          <div class="why-choose-card__arrow">→</div>
+          <div class="bottom-accent"></div>
         </article>
       </div>
     </section>
 
     <section class="clients" id="media">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Clients &amp; Collaborations</p>
-          <h2>Trusted across India &amp; beyond</h2>
+      <div class="clients__header">
+        <p class="eyebrow">Clients & Collaborations</p>
+        <h2>Trusted by Industry<br>Leaders Worldwide</h2>
+        <p class="clients__subtitle">Protecting critical infrastructure for Fortune 500 companies and leading enterprises</p>
+      </div>
+
+      <div class="clients__marquee">
+        <div class="clients__track">
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Reliance</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Tata Group</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Infosys</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">GAIL</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Siemens</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">L&T</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Adani</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">ONGC</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Wipro</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Mahindra</text>
+            </svg>
+          </div>
+          
+          <!-- Duplicate for seamless loop -->
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Reliance</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Tata Group</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Infosys</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">GAIL</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Siemens</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">L&T</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Adani</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">ONGC</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Wipro</text>
+            </svg>
+          </div>
+          <div class="client-logo">
+            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Mahindra</text>
+            </svg>
+          </div>
         </div>
       </div>
-      <div class="container ribbon-track logos">
-        <span>Indian Railways</span>
-        <span>Reliance</span>
-        <span>Adani</span>
-        <span>Infosys</span>
-        <span>Tata Steel</span>
-        <span>L&amp;T</span>
-        <span>Amazon</span>
+
+      <div class="clients__stats">
+        <div class="client-stat">
+          <div class="client-stat__number">200+</div>
+          <div class="client-stat__label">Enterprise Clients</div>
+        </div>
+        <div class="client-stat">
+          <div class="client-stat__number">98%</div>
+          <div class="client-stat__label">Client Retention</div>
+        </div>
+        <div class="client-stat">
+          <div class="client-stat__number">15+</div>
+          <div class="client-stat__label">Years Partnership</div>
+        </div>
       </div>
     </section>
 
-    <section class="awards" id="awards">
-      <div class="container section-head">
-        <div>
-          <p class="eyebrow">Awards &amp; Recognitions</p>
-          <h2>Recognition for safety excellence</h2>
-        </div>
+    <section class="awards" id="careers">
+      <div class="awards__header">
+        <p class="eyebrow">Awards & Recognitions</p>
+        <h2>Safety Excellence,<br>Industry Recognized</h2>
+        <p class="awards__subtitle">Honored for our commitment to fire safety innovation and operational excellence</p>
       </div>
-      <div class="container card-grid narrow">
-        <article class="card mini"><h3>Safety Award 2024</h3><p>Recognized for zero-incident execution across projects.</p></article>
-        <article class="card mini"><h3>Industry Association</h3><p>Active member contributing to fire safety standards.</p></article>
-        <article class="card mini"><h3>Appreciation Letters</h3><p>Commendations from leading industrial clients.</p></article>
+      
+      <div class="awards__grid">
+        <article class="award-card" data-award="1">
+          <div class="award-card__year">2024</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 4L36 20L44 12L40 28H48L32 44L28 28L20 36L24 20H16L32 4Z" fill="currentColor"/>
+              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>National Safety Award</h3>
+            <p>Ministry of Labour & Employment</p>
+            <span class="award-card__badge">Excellence</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
+
+        <article class="award-card" data-award="2">
+          <div class="award-card__year">2023</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 8Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <circle cx="32" cy="26" r="6" fill="currentColor"/>
+              <path d="M32 46V54M26 52L32 54L38 52" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>FM Global Partner Recognition</h3>
+            <p>Factory Mutual Global Excellence</p>
+            <span class="award-card__badge">Certified Partner</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
+
+        <article class="award-card" data-award="3">
+          <div class="award-card__year">2023</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 12L24 28H40L32 12Z" fill="currentColor"/>
+              <rect x="20" y="30" width="24" height="22" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M28 38L30 40L36 34" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="8" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>Government Appreciation</h3>
+            <p>Rapid Emergency Response</p>
+            <span class="award-card__badge">Commended</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
+
+        <article class="award-card" data-award="4">
+          <div class="award-card__year">2022</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M28 24L31 27L37 21" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 38L20 52H44L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="24" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>ISO 9001:2015 Certified</h3>
+            <p>Quality Management Systems</p>
+            <span class="award-card__badge">Certified</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
+
+        <article class="award-card" data-award="5">
+          <div class="award-card__year">2022</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 12C24 12 18 18 18 26V32L14 36V44H50V36L46 32V26C46 18 40 12 32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M28 44V48C28 50 30 52 32 52C34 52 36 50 36 48V44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="32" cy="28" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>Innovation in Fire Safety</h3>
+            <p>Technology Leadership Award</p>
+            <span class="award-card__badge">Innovation</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
+
+        <article class="award-card" data-award="6">
+          <div class="award-card__year">2021</div>
+          <div class="award-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="24" width="32" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
+              <path d="M24 32H40M24 38H40M24 44H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 24V18C26 15 29 12 32 12C35 12 38 15 38 18V24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="award-card__content">
+            <h3>Best Safety Contractor</h3>
+            <p>National Safety Council</p>
+            <span class="award-card__badge">Awarded</span>
+          </div>
+          <div class="award-card__shine"></div>
+        </article>
       </div>
     </section>
 
-    <span class="anchor-target" id="careers"></span>
-    <section class="cta-banner" id="contact">
-      <div class="container cta-banner-inner">
+    <section class="cta" id="quote">
+      <div class="cta__inner">
         <div>
-          <p class="eyebrow">Looking for a Reliable Fire Protection Partner?</p>
-          <h2>Get engineered fire safety that works when it matters most.</h2>
+          <p class="eyebrow">Ready to protect</p>
+          <h2>Looking for a Reliable Fire Protection Partner?</h2>
+          <p class="sub">Let’s design, install, and maintain a system built for your risk profile.</p>
         </div>
-        <div class="hero-actions">
-          <a class="btn primary" href="#contact">Request a Quote</a>
-          <a class="btn ghost" href="tel:+912243511500">Call Now</a>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="mailto:sales@newfire.com">Request a Quote</a>
+          <a class="btn btn--ghost" href="tel:+911234567890">Call Now</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <div class="footer-graphic" aria-hidden="true"></div>
-    <div class="container footer-grid">
+  <footer class="footer" id="contact">
+    <div class="footer__top">
       <div>
-        <div class="brand">New<span>Fire</span></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et tellus luctus, luctus nunc ultricies leo.</p>
-        <p class="copyright">Copyright © 2026 NewFire. All rights reserved.</p>
+        <h3>NEWFIRE</h3>
+        <p>Integrated fire protection across design, engineering, installation, and maintenance.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+91 123 456 7890</p>
+        <p>sales@newfire.com</p>
+        <p>Plot 9, Industrial Estate, Pune</p>
       </div>
       <div>
         <h4>Quick Links</h4>
-        <a href="#story">About us</a>
-        <a href="#contact">Services</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#pages">FAQS</a>
-        <a href="#pages">Terms & Conditions</a>
-        <a href="#contact">Privacy Policy</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#industries">Solutions</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
       </div>
       <div>
-        <h4>Our Services</h4>
-        <a href="#services">Fire Suppression</a>
-        <a href="#services">Community Safety</a>
-        <a href="#services">Fire Investigation</a>
-        <a href="#services">Rescue Services</a>
-        <a href="#services">Medical Service</a>
-        <a href="#services">Ambulance Service</a>
-      </div>
-      <div>
-        <h4>Subscribe Newsletter</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed euismod neque.</p>
+        <h4>Newsletter</h4>
         <form class="newsletter">
-          <input type="email" placeholder="Your Email" required>
+          <input type="email" placeholder="Work email" required />
           <button type="submit">Subscribe</button>
         </form>
       </div>
     </div>
+    <div class="footer__bottom">© 2026 NEWFIRE. All rights reserved.</div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
