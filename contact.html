@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | NEWFIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <header class="hero contact-page-header" style="min-height: auto; padding-bottom: 0;">
+    <nav class="nav" id="nav">
+      <div class="nav__logo"><a href="index.html">NEWFIRE</a></div>
+      <ul class="nav__links" id="navLinks">
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Company <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--simple">
+            <a href="about.html">About New Fire</a>
+            <a href="#leadership">Leadership Team</a>
+            <a href="milestones.html">Legacy &amp; Milestones</a>
+            <a href="#ethics">Quality, Safety &amp; Ethics</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu nav__item--solutions">
+          <button class="nav__trigger">Solutions <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--solutions">
+            <div class="nav__parent-col">
+              <button class="nav__parent" data-target="solutions-clean-agent">Clean Agent Systems</button>
+              <button class="nav__parent" data-target="solutions-co2">CO2 Extinguishing Systems</button>
+              <button class="nav__parent" data-target="solutions-water">Water Based Protections</button>
+              <button class="nav__parent" data-target="solutions-foam">Foam Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-caf">Compressed Air Foam Systems - CAF</button>
+              <button class="nav__parent" data-target="solutions-detection">Fire Detection &amp; Alarm Systems &amp; Gas
+                Detectors</button>
+              <button class="nav__parent" data-target="solutions-voice">Public Address &amp; Emergency Voice Evacuation
+                System</button>
+              <button class="nav__parent" data-target="solutions-infrared">Infrared Solar Detection</button>
+              <button class="nav__parent" data-target="solutions-utility">Fuel Oil Handling System</button>
+              <button class="nav__parent" data-target="solutions-passive">Low Pressure Piping</button>
+              <button class="nav__parent" data-target="solutions-portable">DCP System</button>
+              <button class="nav__parent" data-target="solutions-signage">Fire Door &amp; Passive Fire Protection
+                System</button>
+              <button class="nav__parent" data-target="solutions-access">Emergency Lights &amp; Exit Signages</button>
+              <button class="nav__parent" data-target="solutions-a">Tube Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-b">Fire Extinguishers</button>
+              <button class="nav__parent" data-target="solutions-c">Fire Curtains</button>
+              <button class="nav__parent" data-target="solutions-d">LHDC Systems</button>
+              <button class="nav__parent" data-target="solutions-e">Infrared Transit Heat Detectors</button>
+
+            </div>
+            <div class="nav__submenu-panel">
+              <div class="nav__submenu" id="solutions-clean-agent">
+                <p class="nav__label">Clean Agent Systems</p>
+                <a href="#products">Argonite</a>
+                <a href="#products">Novec 1230 or FK-5-1-12</a>
+                <a href="#products">Inert Gas System - IG-541, IG-55</a>
+              </div>
+              <div class="nav__submenu" id="solutions-co2">
+                <p class="nav__label">CO2 Extinguishing Systems</p>
+                <a href="#products">High Pressure</a>
+                <a href="#products">Low Pressure</a>
+                <a href="#products">Dual Redundant Actuator (SIL2)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-water">
+                <p class="nav__label">Water Based Protections</p>
+                <a href="#products">Hydrant</a>
+                <a href="#products">Water Spray - Medium Velocity, High Velocity</a>
+                <a href="#products">Sprinkler System</a>
+                <a href="#products">Water Mist System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-foam">
+                <p class="nav__label">Foam Suppression Systems</p>
+                <a href="#products">Automatic</a>
+                <a href="#products">Manual</a>
+                <a href="#products">Rim seal for Floating Roof with Tubing detection</a>
+              </div>
+              <div class="nav__submenu" id="solutions-caf">
+                <p class="nav__label">Compressed Air Foam Systems - CAF</p>
+                <a href="#products">Poly Twin DCP &amp; Foam Unit</a>
+                <a href="#products">Remote Operated Monitor for CAF</a>
+              </div>
+              <div class="nav__submenu" id="solutions-detection">
+                <p class="nav__label">Fire Detection &amp; Alarm Systems &amp; Gas Detectors</p>
+                <a href="#products">Fire Detection and Alarm Systems</a>
+                <a href="#products">Gas Detectors (Solar blind)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-voice">
+                <p class="nav__label">Public Address &amp; Emergency Voice Evacuation System</p>
+                <a href="#products">Public Address System</a>
+                <a href="#products">Emergency Voice Evacuation System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-infrared">
+                <p class="nav__label">Infrared Solar Detection</p>
+                <a href="#products">Infrared Solar Detector</a>
+              </div>
+              <div class="nav__submenu" id="solutions-utility">
+                <p class="nav__label">Fuel Oil Handling System</p>
+                <a href="#products">Fuel Oil Handling System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-passive">
+                <p class="nav__label">Low Pressure Piping</p>
+                <a href="#products">Low Pressure Piping</a>
+              </div>
+              <div class="nav__submenu" id="solutions-portable">
+                <p class="nav__label">DCP System</p>
+                <a href="#products">DCP System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-signage">
+                <p class="nav__label">Fire Door &amp; Passive Fire Protection System</p>
+                <a href="#products">Fire Door</a>
+                <a href="#products">Passive Fire Protection System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-access">
+                <p class="nav__label">Emergency Lights &amp; Exit Signages</p>
+                <a href="#products">Emergency Lights</a>
+                <a href="#products">Exit Signages</a>
+              </div>
+              <div class="nav__submenu" id="solutions-a">
+                <p class="nav__label">Tube Suppression Systems</p>
+                <a href="#products">Tube Suppression Systems</a>
+              </div>
+              <div class="nav__submenu" id="solutions-b">
+                <p class="nav__label">Fire Extinguishers</p>
+                <a href="#products">Fire Extinguishers</a>
+              </div>
+              <div class="nav__submenu" id="solutions-c">
+                <p class="nav__label">Fire Curtains</p>
+                <a href="#products">Fire Curtains</a>
+              </div>
+              <div class="nav__submenu" id="solutions-d">
+                <p class="nav__label">LHDC Systems</p>
+                <a href="#products">Advance / Intelligent Temp. Heat Detection &amp; Monitoring</a>
+                <a href="#products">Digital &amp; Resettable Type for coal conveyors and cable trays</a>
+              </div>
+              <div class="nav__submenu" id="solutions-e">
+                <p class="nav__label">Infrared Transit Heat Detectors</p>
+                <a href="#products">Infrared Transit Heat Detectors for coal conveyor belts</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Industries <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#oil">Oil, Gas &amp; Energy</a>
+            <a href="#manufacturing">Manufacturing &amp; Industrial Plants</a>
+            <a href="#commercial">Commercial &amp; High-Rise Buildings</a>
+            <a href="#data">Data Centres &amp; IT Infrastructure</a>
+            <a href="#healthcare">Healthcare &amp; Pharmaceuticals</a>
+            <a href="#infrastructure">Infrastructure &amp; Public Utilities</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Engineering &amp; Services <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#risk">Risk Assessment &amp; Fire Modelling</a>
+            <a href="#system-design">System Design &amp; Engineering</a>
+            <a href="#installation">Installation &amp; Execution</a>
+            <a href="#testing">Testing, Commissioning &amp; Handover</a>
+            <a href="#maintenance">AMC, Maintenance &amp; Retrofits</a>
+            <a href="#training">Training &amp; Fire Safety Audits</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Standards &amp; Approvals <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#projects">Projects &amp; Case Studies</a>
+            <a href="#certifications">Certifications &amp; Compliance</a>
+            <a href="#manufacturing">Manufacturing &amp; Infrastructure</a>
+            <a href="#partners">Technology Partners</a>
+            <a href="clients.html">Clients &amp; Testimonials</a>
+          </div>
+        </li>
+
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="#manufacturing">Manufacturing</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="#design">Design Consultancy</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <div class="nav__cta">
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-page-hero">
+      <div class="contact-hero__bg"></div>
+      <div class="contact-hero__particles"></div>
+      <div class="contact-hero__content">
+        <h1 class="contact-hero__title">We Are Here To <br><span class="text-highlight" data-text="Protect You">Protect
+            You</span></h1>
+        <p class="contact-hero__subtitle">Find our corporate head office, regional branches, and manufacturing works
+          below. Our team is ready to deliver world-class fire safety solutions anywhere in India.</p>
+
+        <div class="contact-hero__scroll-indicator">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+      <div class="contact-hero__shape-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="#f5f7fa"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+
+        <!-- Head Office Section -->
+        <div class="contact-head-office office-card-gsap">
+          <div class="contact-head-office__content">
+            <p class="eyebrow">REGD OFFICE</p>
+            <h2>Mumbai Head Office</h2>
+            <div class="office-details">
+              <div class="detail-row">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="detail-text">
+                  <p><strong>M/s. New Fire Engineers Pvt. Ltd.</strong></p>
+                  <p>16, T.V. Industrial Estate, S.K. Ahire Marg, Worli, <br>Mumbai - 400 030.</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="detail-text">
+                  <p>+91 22 - 24938293 / 24938296 / 24960889<br>24960891 / 66602856</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="detail-text">
+                  <p><strong>Fax:</strong> +91 22 - 24932439 / 66602853</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="detail-text">
+                  <a href="mailto:info@newfire.co.in">info@newfire.co.in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-head-office__map">
+            <iframe
+              src="https://maps.google.com/maps?q=New%20Fire%20Engineers%20Pvt.%20Ltd.,%2016,%20T.V.%20Industrial%20Estate,%20S.K.%20Ahire%20Marg,%20Worli,%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-header">
+          <h2>Other Branches</h2>
+          <p class="section__sub">Our robust network allows us to provide uncompromised support across major zones.</p>
+        </div>
+
+        <div class="branches-grid">
+
+          <!-- Delhi -->
+          <article class="branch-card office-card-gsap">
+            <div class="branch-card__glow"></div>
+            <h3>Delhi</h3>
+            <p class="branch-card__name">M/s. New Fire Engineers Pvt. Ltd</p>
+            <div class="branch-card__info">
+              <p>Plot No. D4, Adjacent to Mata Amrit Anand Maji Mandir, Shanti Kunj, Vasant Kunj,<br>New Delhi - 110 070
+              </p>
+              <div class="branch-stats">
+                <span><strong>Tel:</strong> 011- 26124352/ 41004253</span>
+                <span><strong>Fax:</strong> 011-26124350</span>
+                <span><strong>Email:</strong> <a href="mailto:newfiredelhi@vsnl.net">newfiredelhi@vsnl.net</a></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kolkatta -->
+          <article class="branch-card office-card-gsap">
+            <div class="branch-card__glow"></div>
+            <h3>Kolkatta</h3>
+            <p class="branch-card__name">M/s. New Fire Engineers Pvt. Ltd.</p>
+            <div class="branch-card__info">
+              <p>Flat no. 3BC, Block B, 3rd floor, 42/132 New Ballygunge Road,<br>Kolkata - 700 039</p>
+              <div class="branch-stats">
+                <span><strong>Tel:</strong> 033 - 23446717</span>
+                <span><strong>Mob:</strong> 09831567566</span>
+                <span><strong>Email:</strong> <a
+                    href="mailto:newfirekolkata@newfire.co.in">newfirekolkata@newfire.co.in</a></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chennai -->
+          <article class="branch-card office-card-gsap">
+            <div class="branch-card__glow"></div>
+            <h3>Chennai</h3>
+            <p class="branch-card__name">M/s. New Fire Engineers Pvt. Ltd.<br>(Mr. PSN Swami)</p>
+            <div class="branch-card__info">
+              <p>A-6. Omkar Flat Plot No. 7, 8, 9 Chowdhary Nagar Valasavakam<br>Chennai - 600 087</p>
+              <div class="branch-stats">
+                <span><strong>Mob:</strong> 09444144421 / 09600094421</span>
+                <span><strong>Email:</strong> <a
+                    href="mailto:newfirechennai@newfire.co.in">newfirechennai@newfire.co.in</a></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secunderabad -->
+          <article class="branch-card office-card-gsap">
+            <div class="branch-card__glow"></div>
+            <h3>Secunderabad</h3>
+            <p class="branch-card__name">M/s. New Fire Engineers Pvt. Ltd.<br>(Mr. Kartik Sahgal)</p>
+            <div class="branch-card__info">
+              <p>39, Kiran Enclave, Sikh Road,<br>Secunderabad - 500 009.</p>
+              <div class="branch-stats">
+                <span><strong>Tel:</strong> 040- 27840797</span>
+                <span><strong>Fax:</strong> 040- 27845440</span>
+                <span><strong>Email:</strong> <a
+                    href="mailto:kartiksahgal123@rediffmail.com">kartiksahgal123@rediffmail.com</a></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Works -->
+          <article class="branch-card branch-card--works office-card-gsap">
+            <div class="branch-card__glow branch-card__glow--red"></div>
+            <h3>Works</h3>
+            <p class="branch-card__name">M/s New Fire Engineers Pvt. Ltd</p>
+            <div class="branch-card__info">
+              <p>Unit No.4, Block II B wing, Technopark, Masat Indl. Estate,<br>Masat, Silvassa.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div>
+        <h3>NEWFIRE</h3>
+        <p>Integrated fire protection across design, engineering, installation, and maintenance.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+91 123 456 7890</p>
+        <p>sales@newfire.com</p>
+        <p>Plot 9, Industrial Estate, Pune</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#industries">Solutions</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter">
+          <input type="email" placeholder="Work email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">Â© 2026 NEWFIRE. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clients & Testimonials | NEWFIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <header class="hero contact-page-header" style="min-height: auto; padding-bottom: 0;">
+    <nav class="nav" id="nav">
+      <div class="nav__logo"><a href="index.html">NEWFIRE</a></div>
+      <ul class="nav__links" id="navLinks">
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Company <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--simple">
+            <a href="about.html">About New Fire</a>
+            <a href="#leadership">Leadership Team</a>
+            <a href="milestones.html">Legacy &amp; Milestones</a>
+            <a href="#ethics">Quality, Safety &amp; Ethics</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu nav__item--solutions">
+          <button class="nav__trigger">Solutions <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--solutions">
+            <div class="nav__parent-col">
+              <button class="nav__parent" data-target="solutions-clean-agent">Clean Agent Systems</button>
+              <button class="nav__parent" data-target="solutions-co2">CO2 Extinguishing Systems</button>
+              <button class="nav__parent" data-target="solutions-water">Water Based Protections</button>
+              <button class="nav__parent" data-target="solutions-foam">Foam Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-caf">Compressed Air Foam Systems - CAF</button>
+              <button class="nav__parent" data-target="solutions-detection">Fire Detection &amp; Alarm Systems &amp; Gas
+                Detectors</button>
+              <button class="nav__parent" data-target="solutions-voice">Public Address &amp; Emergency Voice Evacuation
+                System</button>
+              <button class="nav__parent" data-target="solutions-infrared">Infrared Solar Detection</button>
+              <button class="nav__parent" data-target="solutions-utility">Fuel Oil Handling System</button>
+              <button class="nav__parent" data-target="solutions-passive">Low Pressure Piping</button>
+              <button class="nav__parent" data-target="solutions-portable">DCP System</button>
+              <button class="nav__parent" data-target="solutions-signage">Fire Door &amp; Passive Fire Protection
+                System</button>
+              <button class="nav__parent" data-target="solutions-access">Emergency Lights &amp; Exit Signages</button>
+              <button class="nav__parent" data-target="solutions-a">Tube Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-b">Fire Extinguishers</button>
+              <button class="nav__parent" data-target="solutions-c">Fire Curtains</button>
+              <button class="nav__parent" data-target="solutions-d">LHDC Systems</button>
+              <button class="nav__parent" data-target="solutions-e">Infrared Transit Heat Detectors</button>
+
+            </div>
+            <div class="nav__submenu-panel">
+              <div class="nav__submenu" id="solutions-clean-agent">
+                <p class="nav__label">Clean Agent Systems</p>
+                <a href="#products">Argonite</a>
+                <a href="#products">Novec 1230 or FK-5-1-12</a>
+                <a href="#products">Inert Gas System - IG-541, IG-55</a>
+              </div>
+              <div class="nav__submenu" id="solutions-co2">
+                <p class="nav__label">CO2 Extinguishing Systems</p>
+                <a href="#products">High Pressure</a>
+                <a href="#products">Low Pressure</a>
+                <a href="#products">Dual Redundant Actuator (SIL2)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-water">
+                <p class="nav__label">Water Based Protections</p>
+                <a href="#products">Hydrant</a>
+                <a href="#products">Water Spray - Medium Velocity, High Velocity</a>
+                <a href="#products">Sprinkler System</a>
+                <a href="#products">Water Mist System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-foam">
+                <p class="nav__label">Foam Suppression Systems</p>
+                <a href="#products">Automatic</a>
+                <a href="#products">Manual</a>
+                <a href="#products">Rim seal for Floating Roof with Tubing detection</a>
+              </div>
+              <div class="nav__submenu" id="solutions-caf">
+                <p class="nav__label">Compressed Air Foam Systems - CAF</p>
+                <a href="#products">Poly Twin DCP &amp; Foam Unit</a>
+                <a href="#products">Remote Operated Monitor for CAF</a>
+              </div>
+              <div class="nav__submenu" id="solutions-detection">
+                <p class="nav__label">Fire Detection &amp; Alarm Systems &amp; Gas Detectors</p>
+                <a href="#products">Fire Detection and Alarm Systems</a>
+                <a href="#products">Gas Detectors (Solar blind)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-voice">
+                <p class="nav__label">Public Address &amp; Emergency Voice Evacuation System</p>
+                <a href="#products">Public Address System</a>
+                <a href="#products">Emergency Voice Evacuation System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-infrared">
+                <p class="nav__label">Infrared Solar Detection</p>
+                <a href="#products">Infrared Solar Detector</a>
+              </div>
+              <div class="nav__submenu" id="solutions-utility">
+                <p class="nav__label">Fuel Oil Handling System</p>
+                <a href="#products">Fuel Oil Handling System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-passive">
+                <p class="nav__label">Low Pressure Piping</p>
+                <a href="#products">Low Pressure Piping</a>
+              </div>
+              <div class="nav__submenu" id="solutions-portable">
+                <p class="nav__label">DCP System</p>
+                <a href="#products">DCP System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-signage">
+                <p class="nav__label">Fire Door &amp; Passive Fire Protection System</p>
+                <a href="#products">Fire Door</a>
+                <a href="#products">Passive Fire Protection System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-access">
+                <p class="nav__label">Emergency Lights &amp; Exit Signages</p>
+                <a href="#products">Emergency Lights</a>
+                <a href="#products">Exit Signages</a>
+              </div>
+              <div class="nav__submenu" id="solutions-a">
+                <p class="nav__label">Tube Suppression Systems</p>
+                <a href="#products">Tube Suppression Systems</a>
+              </div>
+              <div class="nav__submenu" id="solutions-b">
+                <p class="nav__label">Fire Extinguishers</p>
+                <a href="#products">Fire Extinguishers</a>
+              </div>
+              <div class="nav__submenu" id="solutions-c">
+                <p class="nav__label">Fire Curtains</p>
+                <a href="#products">Fire Curtains</a>
+              </div>
+              <div class="nav__submenu" id="solutions-d">
+                <p class="nav__label">LHDC Systems</p>
+                <a href="#products">Advance / Intelligent Temp. Heat Detection &amp; Monitoring</a>
+                <a href="#products">Digital &amp; Resettable Type for coal conveyors and cable trays</a>
+              </div>
+              <div class="nav__submenu" id="solutions-e">
+                <p class="nav__label">Infrared Transit Heat Detectors</p>
+                <a href="#products">Infrared Transit Heat Detectors for coal conveyor belts</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Industries <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#oil">Oil, Gas &amp; Energy</a>
+            <a href="#manufacturing">Manufacturing &amp; Industrial Plants</a>
+            <a href="#commercial">Commercial &amp; High-Rise Buildings</a>
+            <a href="#data">Data Centres &amp; IT Infrastructure</a>
+            <a href="#healthcare">Healthcare &amp; Pharmaceuticals</a>
+            <a href="#infrastructure">Infrastructure &amp; Public Utilities</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Engineering &amp; Services <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#risk">Risk Assessment &amp; Fire Modelling</a>
+            <a href="#system-design">System Design &amp; Engineering</a>
+            <a href="#installation">Installation &amp; Execution</a>
+            <a href="#testing">Testing, Commissioning &amp; Handover</a>
+            <a href="#maintenance">AMC, Maintenance &amp; Retrofits</a>
+            <a href="#training">Training &amp; Fire Safety Audits</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Standards &amp; Approvals <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--grid">
+            <a href="#projects">Projects &amp; Case Studies</a>
+            <a href="#certifications">Certifications &amp; Compliance</a>
+            <a href="#manufacturing">Manufacturing &amp; Infrastructure</a>
+            <a href="#partners">Technology Partners</a>
+            <a href="clients.html">Clients &amp; Testimonials</a>
+          </div>
+        </li>
+
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="#manufacturing">Manufacturing</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="#design">Design Consultancy</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <div class="nav__cta">
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-page-hero">
+      <div class="contact-hero__bg"></div>
+      <div class="contact-hero__particles"></div>
+      <div class="contact-hero__content">
+        <h1 class="contact-hero__title">Global <br><span class="text-highlight" data-text="Client Base">Client Base</span></h1>
+        <p class="contact-hero__subtitle">Trusted by industry leaders across sectors. Our commitment to fire safety excellence has earned us long-standing partnerships with domestic and international giants.</p>
+        
+        <div class="contact-hero__scroll-indicator">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="contact-hero__shape-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f5f7fa"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="clients-section">
+      <div class="clients-container">
+        <div class="clients-grid">
+          
+          <!-- Banks -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M8 21v-7m4 7v-7m4 7v-7"/></svg>
+            </div>
+            <h3>Banks</h3>
+            <div class="client-names-list">
+              <p>Reserve Bank of India</p>
+              <p>State Bank of India</p>
+              <p>Standard Chartered Bank of India</p>
+              <p>Citibank</p>
+            </div>
+          </div>
+
+          <!-- Foreign Projects -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Foreign Projects</h3>
+            <div class="client-names-list">
+              <p>Oman Refinery GTG, Oman</p>
+              <p>Sulaymaniah Power Plant, Iraq</p>
+              <p>Ruais, Libya</p>
+              <p>Salma Power Plant, Afghanistan</p>
+            </div>
+          </div>
+
+          <!-- Auto Mobile -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M7 10l2-6h6l2 6M5 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+            </div>
+            <h3>Auto Mobile</h3>
+            <div class="client-names-list">
+              <p>Tata Motors</p>
+              <p>Mahindra &amp; Mahindra</p>
+              <p>Maruti Suzuki</p>
+              <p>Hyundai</p>
+            </div>
+          </div>
+
+          <!-- Buildings -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M9 21V9l3-3 3 3v12"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+            </div>
+            <h3>Buildings</h3>
+            <div class="client-names-list">
+              <p>Lodha Group</p>
+              <p>DLF Limited</p>
+              <p>Oberoi Realty</p>
+              <p>K Raheja Corp</p>
+            </div>
+          </div>
+
+          <!-- Cement -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Cement</h3>
+            <div class="client-names-list">
+              <p>UltraTech Cement</p>
+              <p>Ambuja Cement</p>
+              <p>ACC Limited</p>
+              <p>Shree Cement</p>
+            </div>
+          </div>
+
+          <!-- Chemical -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v8L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45L14 10V2"/><path d="M8.5 2h7M7 16h10"/></svg>
+            </div>
+            <h3>Chemical</h3>
+            <div class="client-names-list">
+              <p>Tata Chemicals</p>
+              <p>BASF India</p>
+              <p>Bayer CropScience</p>
+              <p>Pidilite Industries</p>
+            </div>
+          </div>
+
+          <!-- Gas Turbine -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M12 12l-4 4m4-4l4 4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3>Gas Turbine &amp; Generators</h3>
+            <div class="client-names-list">
+              <p>GE Power</p>
+              <p>Siemens Energy</p>
+              <p>Mitsubishi Power</p>
+              <p>Alstom</p>
+            </div>
+          </div>
+
+          <!-- Shipping -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17h20L19 7H5l-3 10zM5 7V3h14v4M12 17v4M7 17v4M17 17v4"/></svg>
+            </div>
+            <h3>Shipping</h3>
+            <div class="client-names-list">
+              <p>Maersk Line</p>
+              <p>MSC Shipping</p>
+              <p>COSCO Shipping</p>
+              <p>Hapag-Lloyd</p>
+            </div>
+          </div>
+
+          <!-- Steel -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Steel</h3>
+            <div class="client-names-list">
+              <p>Tata Steel</p>
+              <p>JSW Steel</p>
+              <p>SAIL</p>
+              <p>Essar Steel</p>
+            </div>
+          </div>
+
+          <!-- Petrochemical -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12M22 17H2M16 12l4 4-4 4m-4-8l-4 4 4 4"/></svg>
+            </div>
+            <h3>Petrochemical</h3>
+            <div class="client-names-list">
+              <p>Reliance Industries</p>
+              <p>IOCL</p>
+              <p>BPCL</p>
+              <p>HPCL</p>
+            </div>
+          </div>
+
+          <!-- Power -->
+          <div class="client-card office-card-gsap">
+            <div class="client-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Power</h3>
+            <div class="client-names-list">
+              <p>NTPC Limited</p>
+              <p>Tata Power</p>
+              <p>Adani Power</p>
+              <p>JSW Energy</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <div class="contact-header">
+          <h2>Testimonials</h2>
+          <p class="section__sub">What our clients say about our precision and commitment.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card office-card-gsap">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <p class="testimonial-content">New Fire Engineers delivered an exceptional fire suppression system for our data center. Their technical expertise and adherence to timelines were remarkable.</p>
+            <div class="testimonial-author">
+              <strong>Technical Director</strong>
+              <span>Major IT Infrastructure Firm</span>
+            </div>
+          </div>
+          <div class="testimonial-card office-card-gsap">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <p class="testimonial-content">The level of safety compliance and integrated engineering solutions provided by NEWFIRE is unparalleled in the industry.</p>
+            <div class="testimonial-author">
+              <strong>Safety Manager</strong>
+              <span>Leading Petrochemical Plant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div>
+        <h3>NEWFIRE</h3>
+        <p>Integrated fire protection across design, engineering, installation, and maintenance.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+91 123 456 7890</p>
+        <p>sales@newfire.com</p>
+        <p>Plot 9, Industrial Estate, Pune</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="#industries">Solutions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter">
+          <input type="email" placeholder="Work email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy; 2026 NEWFIRE. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
+

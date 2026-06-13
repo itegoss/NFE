@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NEWFIRE | Fire Protection & Safety</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
   <header class="hero">
     <nav class="nav" id="nav">
@@ -20,55 +22,128 @@
         <li class="nav__item nav__item--has-menu">
           <button class="nav__trigger">Company <span class="nav__chevron">▾</span></button>
           <div class="nav__dropdown nav__dropdown--simple">
-            <a href="#about">About New Fire</a>
+            <a href="about.html">About New Fire</a>
             <a href="#leadership">Leadership Team</a>
-            <a href="#legacy">Legacy &amp; Milestones</a>
+            <a href="milestones.html">Legacy &amp; Milestones</a>
             <a href="#ethics">Quality, Safety &amp; Ethics</a>
             <a href="#careers">Careers</a>
           </div>
         </li>
 
-        <li class="nav__item nav__item--has-menu">
+        <li class="nav__item nav__item--has-menu nav__item--solutions">
           <button class="nav__trigger">Solutions <span class="nav__chevron">▾</span></button>
           <div class="nav__dropdown nav__dropdown--solutions">
             <div class="nav__parent-col">
-              <button class="nav__parent" data-target="solutions-detection">Fire Detection</button>
-              <button class="nav__parent" data-target="solutions-suppression">Fire Suppression</button>
-              <button class="nav__parent" data-target="solutions-protection">Fire Protection</button>
-              <button class="nav__parent" data-target="solutions-portable">Portable &amp; First Response</button>
-              <button class="nav__parent" data-target="solutions-turnkey">Integrated Turnkey Fire Engineering</button>
+              <button class="nav__parent" data-target="solutions-clean-agent">Clean Agent Systems</button>
+              <button class="nav__parent" data-target="solutions-co2">CO2 Extinguishing Systems</button>
+              <button class="nav__parent" data-target="solutions-water">Water Based Protections</button>
+              <button class="nav__parent" data-target="solutions-foam">Foam Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-caf">Compressed Air Foam Systems - CAF</button>
+              <button class="nav__parent" data-target="solutions-detection">Fire Detection &amp; Alarm Systems &amp; Gas
+                Detectors</button>
+              <button class="nav__parent" data-target="solutions-voice">Public Address &amp; Emergency Voice Evacuation
+                System</button>
+              <button class="nav__parent" data-target="solutions-infrared">Infrared Solar Detection</button>
+              <button class="nav__parent" data-target="solutions-utility">Fuel Oil Handling System</button>
+              <button class="nav__parent" data-target="solutions-passive">Low Pressure Piping</button>
+              <button class="nav__parent" data-target="solutions-portable">DCP System</button>
+              <button class="nav__parent" data-target="solutions-signage">Fire Door &amp; Passive Fire Protection
+                System</button>
+              <button class="nav__parent" data-target="solutions-access">Emergency Lights &amp; Exit Signages</button>
+              <button class="nav__parent" data-target="solutions-a">Tube Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-b">Fire Extinguishers</button>
+              <button class="nav__parent" data-target="solutions-c">Fire Curtains</button>
+              <button class="nav__parent" data-target="solutions-d">LHDC Systems</button>
+              <button class="nav__parent" data-target="solutions-e">Infrared Transit Heat Detectors</button>
+
             </div>
             <div class="nav__submenu-panel">
+              <div class="nav__submenu" id="solutions-clean-agent">
+                <p class="nav__label">Clean Agent Systems</p>
+                <a href="#products">Argonite</a>
+                <a href="#products">Novec 1230 or FK-5-1-12</a>
+                <a href="#products">Inert Gas System - IG-541, IG-55</a>
+              </div>
+              <div class="nav__submenu" id="solutions-co2">
+                <p class="nav__label">CO2 Extinguishing Systems</p>
+                <a href="#products">High Pressure</a>
+                <a href="#products">Low Pressure</a>
+                <a href="#products">Dual Redundant Actuator (SIL2)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-water">
+                <p class="nav__label">Water Based Protections</p>
+                <a href="#products">Hydrant</a>
+                <a href="#products">Water Spray - Medium Velocity, High Velocity</a>
+                <a href="#products">Sprinkler System</a>
+                <a href="#products">Water Mist System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-foam">
+                <p class="nav__label">Foam Suppression Systems</p>
+                <a href="#products">Automatic</a>
+                <a href="#products">Manual</a>
+                <a href="#products">Rim seal for Floating Roof with Tubing detection</a>
+              </div>
+              <div class="nav__submenu" id="solutions-caf">
+                <p class="nav__label">Compressed Air Foam Systems - CAF</p>
+                <a href="#products">Poly Twin DCP &amp; Foam Unit</a>
+                <a href="#products">Remote Operated Monitor for CAF</a>
+              </div>
               <div class="nav__submenu" id="solutions-detection">
-                <p class="nav__label">Fire Detection</p>
-                <a href="#detection">Conventional &amp; Addressable Systems</a>
-                <a href="#vesda">Early Smoke Detection (VESDA)</a>
-                <a href="#panels">Intelligent Alarm &amp; Control Panels</a>
+                <p class="nav__label">Fire Detection &amp; Alarm Systems &amp; Gas Detectors</p>
+                <a href="#products">Fire Detection and Alarm Systems</a>
+                <a href="#products">Gas Detectors (Solar blind)</a>
               </div>
-              <div class="nav__submenu" id="solutions-suppression">
-                <p class="nav__label">Fire Suppression</p>
-                <a href="#gas">Gas &amp; Clean Agent Systems</a>
-                <a href="#mist">Water Mist Systems</a>
-                <a href="#foam">Foam &amp; Special Hazard Suppression</a>
-                <a href="#kitchen">Kitchen &amp; Electrical Fire Solutions</a>
+              <div class="nav__submenu" id="solutions-voice">
+                <p class="nav__label">Public Address &amp; Emergency Voice Evacuation System</p>
+                <a href="#products">Public Address System</a>
+                <a href="#products">Emergency Voice Evacuation System</a>
               </div>
-              <div class="nav__submenu" id="solutions-protection">
-                <p class="nav__label">Fire Protection</p>
-                <a href="#hydrant">Hydrant Systems</a>
-                <a href="#sprinkler">Sprinkler Systems</a>
-                <a href="#monitors">Monitors, Valves &amp; Accessories</a>
-                <a href="#foam-chambers">Foam Chambers &amp; Rimseal Protection</a>
+              <div class="nav__submenu" id="solutions-infrared">
+                <p class="nav__label">Infrared Solar Detection</p>
+                <a href="#products">Infrared Solar Detector</a>
+              </div>
+              <div class="nav__submenu" id="solutions-utility">
+                <p class="nav__label">Fuel Oil Handling System</p>
+                <a href="#products">Fuel Oil Handling System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-passive">
+                <p class="nav__label">Low Pressure Piping</p>
+                <a href="#products">Low Pressure Piping</a>
               </div>
               <div class="nav__submenu" id="solutions-portable">
-                <p class="nav__label">Portable &amp; First Response</p>
-                <a href="#extinguishers">Fire Extinguishers</a>
-                <a href="#hoses">Hoses, Nozzles &amp; Cabinets</a>
-                <a href="#emergency">Emergency &amp; Safety Accessories</a>
+                <p class="nav__label">DCP System</p>
+                <a href="#products">DCP System</a>
               </div>
-              <div class="nav__submenu" id="solutions-turnkey">
-                <p class="nav__label">Integrated Turnkey Fire Engineering</p>
-                <a href="#design">Design to Deployment</a>
-                <a href="#end-to-end">End-to-End Fire Safety Solutions</a>
+              <div class="nav__submenu" id="solutions-signage">
+                <p class="nav__label">Fire Door &amp; Passive Fire Protection System</p>
+                <a href="#products">Fire Door</a>
+                <a href="#products">Passive Fire Protection System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-access">
+                <p class="nav__label">Emergency Lights &amp; Exit Signages</p>
+                <a href="#products">Emergency Lights</a>
+                <a href="#products">Exit Signages</a>
+              </div>
+              <div class="nav__submenu" id="solutions-a">
+                <p class="nav__label">Tube Suppression Systems</p>
+                <a href="#products">Tube Suppression Systems</a>
+              </div>
+              <div class="nav__submenu" id="solutions-b">
+                <p class="nav__label">Fire Extinguishers</p>
+                <a href="#products">Fire Extinguishers</a>
+              </div>
+              <div class="nav__submenu" id="solutions-c">
+                <p class="nav__label">Fire Curtains</p>
+                <a href="#products">Fire Curtains</a>
+              </div>
+              <div class="nav__submenu" id="solutions-d">
+                <p class="nav__label">LHDC Systems</p>
+                <a href="#products">Advance / Intelligent Temp. Heat Detection &amp; Monitoring</a>
+                <a href="#products">Digital &amp; Resettable Type for coal conveyors and cable trays</a>
+              </div>
+              <div class="nav__submenu" id="solutions-e">
+                <p class="nav__label">Infrared Transit Heat Detectors</p>
+                <a href="#products">Infrared Transit Heat Detectors for coal conveyor belts</a>
               </div>
             </div>
           </div>
@@ -99,33 +174,30 @@
         </li>
 
         <li class="nav__item nav__item--has-menu">
-          <button class="nav__trigger">Capability &amp; Proof <span class="nav__chevron">▾</span></button>
+          <button class="nav__trigger">Standards &amp; Approvals <span class="nav__chevron">▾</span></button>
           <div class="nav__dropdown nav__dropdown--grid">
             <a href="#projects">Projects &amp; Case Studies</a>
             <a href="#certifications">Certifications &amp; Compliance</a>
             <a href="#manufacturing">Manufacturing &amp; Infrastructure</a>
             <a href="#partners">Technology Partners</a>
-            <a href="#testimonials">Clients &amp; Testimonials</a>
+            <a href="clients.html">Clients &amp; Testimonials</a>
           </div>
         </li>
 
-        <li class="nav__item nav__item--has-menu">
-          <button class="nav__trigger">Knowledge Hub <span class="nav__chevron">▾</span></button>
-          <div class="nav__dropdown nav__dropdown--simple">
-            <a href="#blog">Fire Safety Insights (Blog)</a>
-            <a href="#downloads">Technical Datasheets &amp; Downloads</a>
-            <a href="#codes">Codes, Standards &amp; Approvals</a>
-            <a href="#faqs">FAQs</a>
-          </div>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="#manufacturing">Manufacturing</a>
         </li>
 
-        <li class="nav__item nav__item--has-menu">
-          <button class="nav__trigger">Contact Us</button>
-        
+        <li class="nav__item">
+          <a class="nav__trigger" href="#design">Design Consultancy</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__trigger" href="contact.html">Contact Us</a>
         </li>
       </ul>
       <div class="nav__cta">
-        <a class="btn btn--primary" href="#quote">Get a Quote</a>
         <button class="nav__burger" id="burger" aria-label="Open menu">
           <span></span>
           <span></span>
@@ -143,8 +215,13 @@
             <span class="hero__badge-icon"></span>
             <span class="hero__badge-text">Fire Protection Excellence</span>
           </div>
-          <h1 class="hero__title">Stop fires before<br>they stop <span class="hero__title-highlight">you</span></h1>
-          <p class="hero__subtitle">Design, install, and maintain fire systems that stay ready when lives and uptime are on the line. Your safety is our mission.</p>
+          <h1 class="hero__title">
+            <span class="hero__title-static">Stop fires before<br>they stop </span>
+            <span class="hero__title-dynamic" data-words='["you", "disaster", "tragedy", "chaos", "loss"]'></span><span
+              class="hero__title-cursor">|</span>
+          </h1>
+          <p class="hero__subtitle">Design, install, and maintain fire systems that stay ready when lives and uptime are
+            on the line. Your safety is our mission.</p>
 
           <div class="hero__cta-wrapper">
             <a class="hero__cta-button" href="#quote">
@@ -159,15 +236,15 @@
 
           <div class="hero__stats">
             <div class="hero__stat-item">
-              <span class="hero__stat-number">300+</span>
+              <span class="hero__stat-number number" data-count="300" data-suffix="+">300+</span>
               <span class="hero__stat-label">Facilities Protected</span>
             </div>
             <div class="hero__stat-item">
-              <span class="hero__stat-number">24/7</span>
+              <span class="hero__stat-number number" data-count="24" data-suffix="/7">24/7</span>
               <span class="hero__stat-label">Emergency Response</span>
             </div>
             <div class="hero__stat-item">
-              <span class="hero__stat-number">93%</span>
+              <span class="hero__stat-number number" data-count="93" data-suffix="%">93%</span>
               <span class="hero__stat-label">Client Satisfaction</span>
             </div>
           </div>
@@ -181,47 +258,53 @@
         <div class="snapshot__item">
           <div class="snapshot__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7V12C2 16.55 5.84 20.74 12 22C18.16 20.74 22 16.55 22 12V7L12 2ZM12 11H20C19.74 14.73 17.24 17.9 12 19.72V11H4V8.46L12 4.64V11Z" fill="currentColor"/>
+              <path
+                d="M12 2L2 7V12C2 16.55 5.84 20.74 12 22C18.16 20.74 22 16.55 22 12V7L12 2ZM12 11H20C19.74 14.73 17.24 17.9 12 19.72V11H4V8.46L12 4.64V11Z"
+                fill="currentColor" />
             </svg>
           </div>
           <div class="snapshot__content">
-            <span class="snapshot__value">300</span>
+            <span class="snapshot__value number" data-count="300">300</span>
             <span class="snapshot__label">Facilities served</span>
           </div>
         </div>
-        
+
         <div class="snapshot__item">
           <div class="snapshot__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+              <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor" />
             </svg>
           </div>
           <div class="snapshot__content">
-            <span class="snapshot__value">93%</span>
+            <span class="snapshot__value number" data-count="93" data-suffix="%">93%</span>
             <span class="snapshot__label">Trusted client score</span>
           </div>
         </div>
-        
+
         <div class="snapshot__item">
           <div class="snapshot__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+              <path
+                d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                fill="currentColor" />
             </svg>
           </div>
           <div class="snapshot__content">
-            <span class="snapshot__value">150</span>
+            <span class="snapshot__value number" data-count="150">150</span>
             <span class="snapshot__label">Trained staff</span>
           </div>
         </div>
-        
+
         <div class="snapshot__item">
           <div class="snapshot__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="currentColor"/>
+              <path
+                d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"
+                fill="currentColor" />
             </svg>
           </div>
           <div class="snapshot__content">
-            <span class="snapshot__value">25</span>
+            <span class="snapshot__value number" data-count="25">25</span>
             <span class="snapshot__label">Years experience</span>
           </div>
         </div>
@@ -234,7 +317,8 @@
       <div class="section__header service__header">
         <p class="eyebrow">Services</p>
         <h2>End-to-End Protection, One Partner</h2>
-        <p class="section__sub">A single accountable team from hazard study to handover to AMC, keeping your facilities compliant and always-on.</p>
+        <p class="section__sub">A single accountable team from hazard study to handover to AMC, keeping your facilities
+          compliant and always-on.</p>
       </div>
       <div class="service-grid">
         <article class="service-card service-card--design" data-service="1">
@@ -242,45 +326,52 @@
           <div class="service-card__glow service-card__glow--red"></div>
           <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.4 6L14 4H5V21H7V14H12.6L13 16H20V6H14.4Z" fill="currentColor"/>
+              <path d="M14.4 6L14 4H5V21H7V14H12.6L13 16H20V6H14.4Z" fill="currentColor" />
             </svg>
           </div>
           <div class="service-card__content">
             <span class="service-card__tag">Blueprint & code</span>
             <h3>Design & Engineering</h3>
-            <p>Risk assessments, hydraulic calculations, and compliant schematics tailored to your occupancy and hazard class.</p>
+            <p>Risk assessments, hydraulic calculations, and compliant schematics tailored to your occupancy and hazard
+              class.</p>
           </div>
           <div class="service-card__shine"></div>
         </article>
-        
+
         <article class="service-card service-card--install" data-service="2">
           <div class="service-card__number">02</div>
           <div class="service-card__glow service-card__glow--blue"></div>
           <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z" fill="currentColor"/>
+              <path
+                d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z"
+                fill="currentColor" />
             </svg>
           </div>
           <div class="service-card__content">
             <span class="service-card__tag">Build & handover</span>
             <h3>Installation & Commissioning</h3>
-            <p>Project-managed delivery with certified technicians, factory-authorized start-up, and integrated acceptance testing.</p>
+            <p>Project-managed delivery with certified technicians, factory-authorized start-up, and integrated
+              acceptance testing.</p>
           </div>
           <div class="service-card__shine"></div>
         </article>
-        
+
         <article class="service-card service-card--monitor" data-service="3">
           <div class="service-card__number">03</div>
           <div class="service-card__glow service-card__glow--grey"></div>
           <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z"
+                fill="currentColor" />
             </svg>
           </div>
           <div class="service-card__content">
             <span class="service-card__tag">Monitor & improve</span>
             <h3>Maintenance & Monitoring</h3>
-            <p>Planned AMC, remote monitoring, and rapid-response service teams to keep uptime high and compliance continuous.</p>
+            <p>Planned AMC, remote monitoring, and rapid-response service teams to keep uptime high and compliance
+              continuous.</p>
           </div>
           <div class="service-card__shine"></div>
         </article>
@@ -293,13 +384,15 @@
         <h2>Fire Solutions</h2>
         <p class="products__subtitle">Complete protection systems engineered for every scenario</p>
       </div>
-      
+
       <div class="products__grid">
         <article class="product-card" data-product="1">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 8C28 8 24 12 24 16V20H20C18 20 16 22 16 24V52C16 54 18 56 20 56H44C46 56 48 54 48 52V24C48 22 46 20 44 20H40V16C40 12 36 8 32 8ZM28 16C28 14 30 12 32 12C34 12 36 14 36 16V20H28V16ZM32 40C30 40 28 38 28 36C28 34 30 32 32 32C34 32 36 34 36 36C36 38 34 40 32 40Z" fill="currentColor"/>
-              <circle cx="32" cy="36" r="2" fill="currentColor"/>
+              <path
+                d="M32 8C28 8 24 12 24 16V20H20C18 20 16 22 16 24V52C16 54 18 56 20 56H44C46 56 48 54 48 52V24C48 22 46 20 44 20H40V16C40 12 36 8 32 8ZM28 16C28 14 30 12 32 12C34 12 36 14 36 16V20H28V16ZM32 40C30 40 28 38 28 36C28 34 30 32 32 32C34 32 36 34 36 36C36 38 34 40 32 40Z"
+                fill="currentColor" />
+              <circle cx="32" cy="36" r="2" fill="currentColor" />
             </svg>
           </div>
           <h3>Fire Extinguishers</h3>
@@ -310,12 +403,12 @@
         <article class="product-card" data-product="2">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <rect x="24" y="20" width="6" height="6" fill="currentColor"/>
-              <rect x="34" y="20" width="6" height="6" fill="currentColor"/>
-              <rect x="24" y="30" width="6" height="6" fill="currentColor"/>
-              <rect x="34" y="30" width="6" height="6" fill="currentColor"/>
-              <path d="M20 40H44" stroke="currentColor" stroke-width="3"/>
+              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none" />
+              <rect x="24" y="20" width="6" height="6" fill="currentColor" />
+              <rect x="34" y="20" width="6" height="6" fill="currentColor" />
+              <rect x="24" y="30" width="6" height="6" fill="currentColor" />
+              <rect x="34" y="30" width="6" height="6" fill="currentColor" />
+              <path d="M20 40H44" stroke="currentColor" stroke-width="3" />
             </svg>
           </div>
           <h3>In-Panel Fire Suppression</h3>
@@ -326,12 +419,12 @@
         <article class="product-card" data-product="3">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="28" width="40" height="16" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <rect x="18" y="32" width="28" height="8" rx="1" fill="currentColor"/>
-              <path d="M24 20V28M32 16V28M40 20V28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="24" cy="36" r="2" fill="#fff"/>
-              <circle cx="32" cy="36" r="2" fill="#fff"/>
-              <circle cx="40" cy="36" r="2" fill="#fff"/>
+              <rect x="12" y="28" width="40" height="16" rx="2" stroke="currentColor" stroke-width="3" fill="none" />
+              <rect x="18" y="32" width="28" height="8" rx="1" fill="currentColor" />
+              <path d="M24 20V28M32 16V28M40 20V28" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <circle cx="24" cy="36" r="2" fill="#fff" />
+              <circle cx="32" cy="36" r="2" fill="#fff" />
+              <circle cx="40" cy="36" r="2" fill="#fff" />
             </svg>
           </div>
           <h3>Kitchen Fire Suppression</h3>
@@ -342,9 +435,12 @@
         <article class="product-card" data-product="4">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 48C38 48 44 42 44 36C44 30 38 24 32 24C26 24 20 30 20 36C20 42 26 48 32 48Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 12V20M32 44V52M12 32H20M44 32H52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <path d="M18 18L24 24M40 24L46 18M18 46L24 40M40 40L46 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M32 48C38 48 44 42 44 36C44 30 38 24 32 24C26 24 20 30 20 36C20 42 26 48 32 48Z"
+                stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 12V20M32 44V52M12 32H20M44 32H52" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" />
+              <path d="M18 18L24 24M40 24L46 18M18 46L24 40M40 40L46 46" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
             </svg>
           </div>
           <h3>Total Flooding Systems</h3>
@@ -355,9 +451,10 @@
         <article class="product-card" data-product="5">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 16L28 32L32 40L36 32L32 16Z" fill="currentColor"/>
-              <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 8V16M32 48V56M8 32H16M48 32H56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 16L28 32L32 40L36 32L32 16Z" fill="currentColor" />
+              <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 8V16M32 48V56M8 32H16M48 32H56" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" />
             </svg>
           </div>
           <h3>Automatic Firefighters</h3>
@@ -368,10 +465,10 @@
         <article class="product-card" data-product="6">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="20" width="24" height="32" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 30V36M32 36L36 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <rect x="28" y="16" width="8" height="4" rx="1" fill="currentColor"/>
+              <rect x="20" y="20" width="24" height="32" rx="2" stroke="currentColor" stroke-width="3" fill="none" />
+              <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 30V36M32 36L36 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <rect x="28" y="16" width="8" height="4" rx="1" fill="currentColor" />
             </svg>
           </div>
           <h3>Hydrants</h3>
@@ -382,9 +479,11 @@
         <article class="product-card" data-product="7">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="26" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 36C32 36 24 44 24 50C24 54 28 58 32 58C36 58 40 54 40 50C40 44 32 36 32 36Z" fill="currentColor"/>
-              <path d="M26 20L32 8L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="26" r="10" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 36C32 36 24 44 24 50C24 54 28 58 32 58C36 58 40 54 40 50C40 44 32 36 32 36Z"
+                fill="currentColor" />
+              <path d="M26 20L32 8L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <h3>Alarm Solutions</h3>
@@ -395,9 +494,12 @@
         <article class="product-card" data-product="8">
           <div class="product-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 12C24 12 18 18 18 26C18 34 24 40 32 40C40 40 46 34 46 26C46 18 40 12 32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M28 26L31 29L37 23" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 42L20 54H44L42 42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 12C24 12 18 18 18 26C18 34 24 40 32 40C40 40 46 34 46 26C46 18 40 12 32 12Z"
+                stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M28 26L31 29L37 23" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M22 42L20 54H44L42 42" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <h3>Services</h3>
@@ -411,107 +513,164 @@
       <div class="industries__header">
         <p class="eyebrow">Industry Applications</p>
         <h2>Protection Across<br>Every Sector</h2>
-        <p class="industries__subtitle">Specialized fire safety solutions tailored to your industry's unique challenges</p>
+        <p class="industries__subtitle">Specialized fire safety solutions tailored to your industry's unique challenges
+        </p>
       </div>
 
       <div class="industries__grid">
-        <article class="industry-card" data-industry="1">
-          <div class="industry-card__bg"></div>
-          <div class="industry-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 48H48V52H16V48Z" fill="currentColor"/>
-              <path d="M20 44H44V48H20V44Z" fill="currentColor"/>
-              <path d="M24 12H40V44H24V12Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <rect x="28" y="18" width="3" height="3" fill="currentColor"/>
-              <rect x="33" y="18" width="3" height="3" fill="currentColor"/>
-              <rect x="28" y="24" width="3" height="3" fill="currentColor"/>
-              <rect x="33" y="24" width="3" height="3" fill="currentColor"/>
-              <rect x="28" y="30" width="3" height="3" fill="currentColor"/>
-              <rect x="33" y="30" width="3" height="3" fill="currentColor"/>
-              <rect x="28" y="36" width="8" height="6" fill="currentColor"/>
-            </svg>
-          </div>
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-oil.jpg');"></div>
           <div class="industry-card__content">
-            <h3>Oil, Gas & Energy</h3>
-            <p>Foam systems, deluge protection, and hazardous area safety</p>
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 4c-4.4 0-8 1.6-8 3.5v9c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5v-9c0-1.9-3.6-3.5-8-3.5z" />
+                <path d="M4 7.5c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5" />
+              </svg>
+            </span>
+            <h3>Oil &amp; Gas</h3>
+            <p>Specialized suppression for upstream and downstream operations.</p>
+            <a href="#oilgas" class="btn btn--outline">View Capabilities</a>
           </div>
-          <div class="industry-card__number">01</div>
         </article>
 
-        <article class="industry-card" data-industry="2">
-          <div class="industry-card__bg"></div>
-          <div class="industry-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 32L32 12L52 32V52H12V32Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <rect x="26" y="38" width="12" height="14" fill="currentColor"/>
-              <rect x="18" y="24" width="6" height="6" fill="currentColor"/>
-              <rect x="40" y="24" width="6" height="6" fill="currentColor"/>
-              <path d="M12 32H52" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-power.jpg');"></div>
           <div class="industry-card__content">
-            <h3>Manufacturing & Industrial Plants</h3>
-            <p>Sprinkler systems, detection, and process safety integration</p>
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </span>
+            <h3>Energy &amp; Power</h3>
+            <p>Reliable fire protection for power generation and utilities.</p>
+            <a href="#power" class="btn btn--outline">View Capabilities</a>
           </div>
-          <div class="industry-card__number">02</div>
         </article>
 
-        <article class="industry-card" data-industry="3">
-          <div class="industry-card__bg"></div>
-          <div class="industry-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="16" width="40" height="36" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M12 26H52" stroke="currentColor" stroke-width="3"/>
-              <rect x="20" y="32" width="8" height="6" fill="currentColor"/>
-              <rect x="36" y="32" width="8" height="6" fill="currentColor"/>
-              <rect x="20" y="40" width="8" height="6" fill="currentColor"/>
-              <rect x="36" y="40" width="8" height="6" fill="currentColor"/>
-              <path d="M28 8L32 16L36 8" stroke="currentColor" stroke-width="2" fill="none"/>
-            </svg>
-          </div>
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-aviation.jpg');"></div>
           <div class="industry-card__content">
-            <h3>Commercial & High-Rise Buildings</h3>
-            <p>Fire alarm systems, sprinklers, and emergency evacuation</p>
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6 0 .4.2.9.6 1.1l7.8 3.5-3.8 3.8-3.4-.9c-.3-.1-.7 0-.9.2-.2.3-.2.7 0 1l4.4 2.8 2.8 4.4c.3.2.7.2 1 0 .2-.2.3-.6.2-.9l-.9-3.4 3.8-3.8 3.5 7.8c.2.4.7.6 1.1.6h.2c.4-.2.7-.6.6-1.1z" />
+              </svg>
+            </span>
+            <h3>Aviation</h3>
+            <p>Advanced foam solutions and hangar protection systems.</p>
+            <a href="#aviation" class="btn btn--outline">View Capabilities</a>
           </div>
-          <div class="industry-card__number">03</div>
         </article>
 
-        <article class="industry-card" data-industry="4">
-          <div class="industry-card__bg"></div>
-          <div class="industry-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="16" y="20" width="32" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M24 28H40M24 34H40M24 40H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="32" cy="14" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M32 18V20" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-mfg.jpg');"></div>
           <div class="industry-card__content">
-            <h3>Data Centres & IT Infrastructure</h3>
-            <p>Clean agent suppression, VESDA, and precision cooling protection</p>
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+              </svg>
+            </span>
+            <h3>Manufacturing &amp; Automotive</h3>
+            <p>Scalable detection and suppression for large-scale facilities.</p>
+            <a href="#mfg" class="btn btn--outline">View Capabilities</a>
           </div>
-          <div class="industry-card__number">04</div>
         </article>
 
-        <article class="industry-card" data-industry="5">
-          <div class="industry-card__bg"></div>
-          <div class="industry-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 8L28 16H36L32 8Z" fill="currentColor"/>
-              <circle cx="32" cy="28" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M28 28H36M32 24V32" stroke="currentColor" stroke-width="2"/>
-              <rect x="20" y="42" width="24" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M26 47H38" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-defence.jpg');"></div>
           <div class="industry-card__content">
-            <h3>Healthcare & Pharmaceuticals</h3>
-            <p>Life safety systems, clean rooms, and regulatory compliance</p>
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </span>
+            <h3>Defence</h3>
+            <p>Robust and specialized fire safety for critical defense assets.</p>
+            <a href="#defence" class="btn btn--outline">View Capabilities</a>
           </div>
-          <div class="industry-card__number">05</div>
         </article>
 
-        
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-rail.jpg');"></div>
+          <div class="industry-card__content">
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="3" width="16" height="16" rx="2" />
+                <path d="M4 11h16" />
+                <path d="M12 3v8" />
+                <path d="m8 19-2 3" />
+                <path d="m16 19 2 3" />
+                <circle cx="9" cy="15" r="1" />
+                <circle cx="15" cy="15" r="1" />
+              </svg>
+            </span>
+            <h3>Railways</h3>
+            <p>Rapid detection and suppression for rail networks and transit.</p>
+            <a href="#railways" class="btn btn--outline">View Capabilities</a>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-mining.jpg');"></div>
+          <div class="industry-card__content">
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 18h20" />
+                <path d="M12 2a6 6 0 0 0-6 6v10h12V8a6 6 0 0 0-6-6Z" />
+              </svg>
+            </span>
+            <h3>Mining</h3>
+            <p>Heavy duty fire equipment built for extreme environments.</p>
+            <a href="#mining" class="btn btn--outline">View Capabilities</a>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-chem.jpg');"></div>
+          <div class="industry-card__content">
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 2v4.8L3.2 18.5A2 2 0 0 0 4.8 22h14.4a2 2 0 0 0 1.6-3.5L15 6.8V2" />
+                <path d="M8.5 2h7M14 16H10" />
+              </svg>
+            </span>
+            <h3>Chemicals &amp; Fertilizers</h3>
+            <p>Complex hazard protection for volatile chemical storage.</p>
+            <a href="#chemical" class="btn btn--outline">View Capabilities</a>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-marine.jpg');"></div>
+          <div class="industry-card__content">
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 17c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M4 13h16l-1.5-6H5.5L4 13ZM15 7V3h-6v4" />
+              </svg>
+            </span>
+            <h3>Shipping &amp; Ports</h3>
+            <p>Marine-grade firefighting solutions for vessels and docks.</p>
+            <a href="#marine" class="btn btn--outline">View Capabilities</a>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-card__bg" style="background-image: url('assets/ind-highway.jpg');"></div>
+          <div class="industry-card__content">
+            <span class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 22 17 2M2 22l5-20M12 6h.01M12 12h.01M12 18h.01" />
+              </svg>
+            </span>
+            <h3>Highway &amp; Transportation</h3>
+            <p>Emergency fire response systems for transit infrastructures.</p>
+            <a href="#transport" class="btn btn--outline">View Capabilities</a>
+          </div>
+        </article>
+
+
       </div>
     </section>
 
@@ -519,7 +678,8 @@
       <div class="why-choose__header">
         <p class="eyebrow">Why Choose NewFire</p>
         <h2>Your Trusted Fire<br>Safety Partner</h2>
-        <p class="why-choose__subtitle">Excellence in fire protection backed by expertise, certification, and unwavering support</p>
+        <p class="why-choose__subtitle">Excellence in fire protection backed by expertise, certification, and unwavering
+          support</p>
       </div>
 
       <div class="why-choose__grid">
@@ -527,10 +687,11 @@
           <div class="why-choose-card__glow"></div>
           <div class="why-choose-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 30C24 30 18 34 18 40V48H46V40C46 34 40 30 32 30Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M22 52L20 56H44L42 52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="32" cy="20" r="3" fill="currentColor"/>
+              <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 30C24 30 18 34 18 40V48H46V40C46 34 40 30 32 30Z" stroke="currentColor" stroke-width="3"
+                fill="none" />
+              <path d="M22 52L20 56H44L42 52" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="32" cy="20" r="3" fill="currentColor" />
             </svg>
           </div>
           <div class="why-choose-card__content">
@@ -545,9 +706,10 @@
           <div class="why-choose-card__glow"></div>
           <div class="why-choose-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M24 22L30 28L40 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 36H42M22 42H42M22 48H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M24 22L30 28L40 18" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M22 36H42M22 42H42M22 48H34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <div class="why-choose-card__content">
@@ -562,10 +724,11 @@
           <div class="why-choose-card__glow"></div>
           <div class="why-choose-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="22" width="40" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M20 22V18C20 14 24 12 28 12H36C40 12 44 14 44 18V22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="32" cy="36" r="4" fill="currentColor"/>
-              <path d="M22 32L42 32M22 40L42 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="12" y="22" width="40" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M20 22V18C20 14 24 12 28 12H36C40 12 44 14 44 18V22" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" />
+              <circle cx="32" cy="36" r="4" fill="currentColor" />
+              <path d="M22 32L42 32M22 40L42 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <div class="why-choose-card__content">
@@ -580,9 +743,11 @@
           <div class="why-choose-card__glow"></div>
           <div class="why-choose-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M32 14V32L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 12L16 8M44 12L48 8M20 52L16 56M44 52L48 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M32 14V32L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M20 12L16 8M44 12L48 8M20 52L16 56M44 52L48 56" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
             </svg>
           </div>
           <div class="why-choose-card__content">
@@ -597,9 +762,11 @@
           <div class="why-choose-card__glow"></div>
           <div class="why-choose-card__icon">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 12L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <circle cx="32" cy="26" r="4" fill="currentColor"/>
-              <path d="M32 46V52M26 50L32 52L38 50" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 12L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 12Z" stroke="currentColor"
+                stroke-width="3" fill="none" />
+              <circle cx="32" cy="26" r="4" fill="currentColor" />
+              <path d="M32 46V52M26 50L32 52L38 50" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </div>
           <div class="why-choose-card__content">
@@ -616,116 +783,101 @@
       <div class="clients__header">
         <p class="eyebrow">Clients & Collaborations</p>
         <h2>Trusted by Industry<br>Leaders Worldwide</h2>
-        <p class="clients__subtitle">Protecting critical infrastructure for Fortune 500 companies and leading enterprises</p>
+        <p class="clients__subtitle">Protecting critical infrastructure for Fortune 500 companies and leading
+          enterprises</p>
       </div>
 
       <div class="clients__marquee">
         <div class="clients__track">
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Reliance</text>
-            </svg>
+            <img src="assets/1.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Tata Group</text>
-            </svg>
+            <img src="assets/2.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Infosys</text>
-            </svg>
+            <img src="assets/3.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">GAIL</text>
-            </svg>
+            <img src="assets/4.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Siemens</text>
-            </svg>
+            <img src="assets/5.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">L&T</text>
-            </svg>
+            <img src="assets/6.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Adani</text>
-            </svg>
+            <img src="assets/7.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">ONGC</text>
-            </svg>
+            <img src="assets/8.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Wipro</text>
-            </svg>
+            <img src="assets/9.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Mahindra</text>
-            </svg>
+            <img src="assets/10.png" alt="" aria-hidden="true" loading="lazy">
           </div>
-          
+          <div class="client-logo">
+            <img src="assets/11.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/12.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/13.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/14.png" alt="" aria-hidden="true" loading="lazy">
+        </div>
+
           <!-- Duplicate for seamless loop -->
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Reliance</text>
-            </svg>
+            <img src="assets/1.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Tata Group</text>
-            </svg>
+            <img src="assets/2.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Infosys</text>
-            </svg>
+            <img src="assets/3.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">GAIL</text>
-            </svg>
+            <img src="assets/4.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Siemens</text>
-            </svg>
+            <img src="assets/5.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">L&T</text>
-            </svg>
+            <img src="assets/6.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Adani</text>
-            </svg>
+            <img src="assets/7.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">ONGC</text>
-            </svg>
+            <img src="assets/8.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Wipro</text>
-            </svg>
+            <img src="assets/9.png" alt="" aria-hidden="true" loading="lazy">
           </div>
           <div class="client-logo">
-            <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="currentColor">Mahindra</text>
-            </svg>
+            <img src="assets/10.png" alt="" aria-hidden="true" loading="lazy">
           </div>
+          <div class="client-logo">
+            <img src="assets/11.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/12.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/13.png" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="assets/14.png" alt="" aria-hidden="true" loading="lazy">
         </div>
-      </div>
 
+      </div>
+      </div>
       <div class="clients__stats">
         <div class="client-stat">
           <div class="client-stat__number">200+</div>
@@ -748,111 +900,141 @@
         <h2>Safety Excellence,<br>Industry Recognized</h2>
         <p class="awards__subtitle">Honored for our commitment to fire safety innovation and operational excellence</p>
       </div>
-      
-      <div class="awards__grid">
-        <article class="award-card" data-award="1">
-          <div class="award-card__year">2024</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 4L36 20L44 12L40 28H48L32 44L28 28L20 36L24 20H16L32 4Z" fill="currentColor"/>
-              <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" fill="none"/>
-            </svg>
-          </div>
-          <div class="award-card__content">
-            <h3>National Safety Award</h3>
-            <p>Ministry of Labour & Employment</p>
-            <span class="award-card__badge">Excellence</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
 
-        <article class="award-card" data-award="2">
-          <div class="award-card__year">2023</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 8L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 8Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <circle cx="32" cy="26" r="6" fill="currentColor"/>
-              <path d="M32 46V54M26 52L32 54L38 52" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="award-card__content">
-            <h3>FM Global Partner Recognition</h3>
-            <p>Factory Mutual Global Excellence</p>
-            <span class="award-card__badge">Certified Partner</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
+      <div class="awards__carousel-container">
+        <button class="carousel-btn carousel-btn--prev" id="awardsPrev" aria-label="Previous awards">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
 
-        <article class="award-card" data-award="3">
-          <div class="award-card__year">2023</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 12L24 28H40L32 12Z" fill="currentColor"/>
-              <rect x="20" y="30" width="24" height="22" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M28 38L30 40L36 34" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="32" cy="8" r="3" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="award-card__content">
-            <h3>Government Appreciation</h3>
-            <p>Rapid Emergency Response</p>
-            <span class="award-card__badge">Commended</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
+        <div class="awards__carousel">
+          <div class="awards__carousel-track" id="awardsTrack">
+            <article class="award-card" data-award="1">
+              <div class="award-card__year">2024</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 4L36 20L44 12L40 28H48L32 44L28 28L20 36L24 20H16L32 4Z" fill="currentColor" />
+                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" fill="none" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>National Safety Award</h3>
+                <p>Ministry of Labour & Employment</p>
+                <span class="award-card__badge">Excellence</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
 
-        <article class="award-card" data-award="4">
-          <div class="award-card__year">2022</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M28 24L31 27L37 21" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 38L20 52H44L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="32" cy="24" r="4" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="award-card__content">
-            <h3>ISO 9001:2015 Certified</h3>
-            <p>Quality Management Systems</p>
-            <span class="award-card__badge">Certified</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
+            <article class="award-card" data-award="2">
+              <div class="award-card__year">2023</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 8L28 20L20 22L26 28L24 36L32 32L40 36L38 28L44 22L36 20L32 8Z" stroke="currentColor"
+                    stroke-width="3" fill="none" />
+                  <circle cx="32" cy="26" r="6" fill="currentColor" />
+                  <path d="M32 46V54M26 52L32 54L38 52" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>FM Global Partner Recognition</h3>
+                <p>Factory Mutual Global Excellence</p>
+                <span class="award-card__badge">Certified Partner</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
 
-        <article class="award-card" data-award="5">
-          <div class="award-card__year">2022</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 12C24 12 18 18 18 26V32L14 36V44H50V36L46 32V26C46 18 40 12 32 12Z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M28 44V48C28 50 30 52 32 52C34 52 36 50 36 48V44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="32" cy="28" r="4" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="award-card__content">
-            <h3>Innovation in Fire Safety</h3>
-            <p>Technology Leadership Award</p>
-            <span class="award-card__badge">Innovation</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
+            <article class="award-card" data-award="3">
+              <div class="award-card__year">2023</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 12L24 28H40L32 12Z" fill="currentColor" />
+                  <rect x="20" y="30" width="24" height="22" rx="2" stroke="currentColor" stroke-width="3"
+                    fill="none" />
+                  <path d="M28 38L30 40L36 34" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="32" cy="8" r="3" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>Government Appreciation</h3>
+                <p>Rapid Emergency Response</p>
+                <span class="award-card__badge">Commended</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
 
-        <article class="award-card" data-award="6">
-          <div class="award-card__year">2021</div>
-          <div class="award-card__icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="16" y="24" width="32" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M24 32H40M24 38H40M24 44H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M26 24V18C26 15 29 12 32 12C35 12 38 15 38 18V24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+            <article class="award-card" data-award="4">
+              <div class="award-card__year">2022</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="3" fill="none" />
+                  <path d="M28 24L31 27L37 21" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M22 38L20 52H44L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="32" cy="24" r="4" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>ISO 9001:2015 Certified</h3>
+                <p>Quality Management Systems</p>
+                <span class="award-card__badge">Certified</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
+
+            <article class="award-card" data-award="5">
+              <div class="award-card__year">2022</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 12C24 12 18 18 18 26V32L14 36V44H50V36L46 32V26C46 18 40 12 32 12Z" stroke="currentColor"
+                    stroke-width="3" fill="none" />
+                  <path d="M28 44V48C28 50 30 52 32 52C34 52 36 50 36 48V44" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" />
+                  <circle cx="32" cy="28" r="4" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>Innovation in Fire Safety</h3>
+                <p>Technology Leadership Award</p>
+                <span class="award-card__badge">Innovation</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
+
+            <article class="award-card" data-award="6">
+              <div class="award-card__year">2021</div>
+              <div class="award-card__icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="16" y="24" width="32" height="28" rx="2" stroke="currentColor" stroke-width="3"
+                    fill="none" />
+                  <path d="M24 32H40M24 38H40M24 44H32" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M26 24V18C26 15 29 12 32 12C35 12 38 15 38 18V24" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="award-card__content">
+                <h3>Best Safety Contractor</h3>
+                <p>National Safety Council</p>
+                <span class="award-card__badge">Awarded</span>
+              </div>
+              <div class="award-card__shine"></div>
+            </article>
           </div>
-          <div class="award-card__content">
-            <h3>Best Safety Contractor</h3>
-            <p>National Safety Council</p>
-            <span class="award-card__badge">Awarded</span>
-          </div>
-          <div class="award-card__shine"></div>
-        </article>
+        </div>
+
+        <button class="carousel-btn carousel-btn--next" id="awardsNext" aria-label="Next awards">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
       </div>
+
+      <div class="awards__dots" id="awardsDots"></div>
     </section>
 
     <section class="cta" id="quote">
@@ -906,4 +1088,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

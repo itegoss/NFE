@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milestones | NEWFIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <header class="hero contact-page-header milestone-page-header" style="min-height: auto; padding-bottom: 0;">
+    <nav class="nav" id="nav">
+      <div class="nav__logo"><a href="index.html">NEWFIRE</a></div>
+      <ul class="nav__links" id="navLinks">
+        <li class="nav__item nav__item--has-menu">
+          <button class="nav__trigger">Company <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--simple">
+            <a href="about.html">About New Fire</a>
+            <a href="#leadership">Leadership Team</a>
+            <a href="milestones.html">Legacy &amp; Milestones</a>
+            <a href="#ethics">Quality, Safety &amp; Ethics</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-menu nav__item--solutions">
+          <button class="nav__trigger">Solutions <span class="nav__chevron">▾</span></button>
+          <div class="nav__dropdown nav__dropdown--solutions">
+            <div class="nav__parent-col">
+              <button class="nav__parent" data-target="solutions-clean-agent">Clean Agent Systems</button>
+              <button class="nav__parent" data-target="solutions-co2">CO2 Extinguishing Systems</button>
+              <button class="nav__parent" data-target="solutions-water">Water Based Protections</button>
+              <button class="nav__parent" data-target="solutions-foam">Foam Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-caf">Compressed Air Foam Systems - CAF</button>
+              <button class="nav__parent" data-target="solutions-detection">Fire Detection &amp; Alarm Systems &amp; Gas
+                Detectors</button>
+              <button class="nav__parent" data-target="solutions-voice">Public Address &amp; Emergency Voice Evacuation
+                System</button>
+              <button class="nav__parent" data-target="solutions-infrared">Infrared Solar Detection</button>
+              <button class="nav__parent" data-target="solutions-utility">Fuel Oil Handling System</button>
+              <button class="nav__parent" data-target="solutions-passive">Low Pressure Piping</button>
+              <button class="nav__parent" data-target="solutions-portable">DCP System</button>
+              <button class="nav__parent" data-target="solutions-signage">Fire Door &amp; Passive Fire Protection
+                System</button>
+              <button class="nav__parent" data-target="solutions-access">Emergency Lights &amp; Exit Signages</button>
+              <button class="nav__parent" data-target="solutions-a">Tube Suppression Systems</button>
+              <button class="nav__parent" data-target="solutions-b">Fire Extinguishers</button>
+              <button class="nav__parent" data-target="solutions-c">Fire Curtains</button>
+              <button class="nav__parent" data-target="solutions-d">LHDC Systems</button>
+              <button class="nav__parent" data-target="solutions-e">Infrared Transit Heat Detectors</button>
+            </div>
+            <div class="nav__submenu-panel">
+              <div class="nav__submenu" id="solutions-clean-agent">
+                <p class="nav__label">Clean Agent Systems</p>
+                <a href="index.html#products">Argonite</a>
+                <a href="index.html#products">Novec 1230 or FK-5-1-12</a>
+                <a href="index.html#products">Inert Gas System - IG-541, IG-55</a>
+              </div>
+              <div class="nav__submenu" id="solutions-co2">
+                <p class="nav__label">CO2 Extinguishing Systems</p>
+                <a href="index.html#products">High Pressure</a>
+                <a href="index.html#products">Low Pressure</a>
+                <a href="index.html#products">Dual Redundant Actuator (SIL2)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-water">
+                <p class="nav__label">Water Based Protections</p>
+                <a href="index.html#products">Hydrant</a>
+                <a href="index.html#products">Water Spray - Medium Velocity, High Velocity</a>
+                <a href="index.html#products">Sprinkler System</a>
+                <a href="index.html#products">Water Mist System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-foam">
+                <p class="nav__label">Foam Suppression Systems</p>
+                <a href="index.html#products">Automatic</a>
+                <a href="index.html#products">Manual</a>
+                <a href="index.html#products">Rim seal for Floating Roof with Tubing detection</a>
+              </div>
+              <div class="nav__submenu" id="solutions-caf">
+                <p class="nav__label">Compressed Air Foam Systems - CAF</p>
+                <a href="index.html#products">Poly Twin DCP &amp; Foam Unit</a>
+                <a href="index.html#products">Remote Operated Monitor for CAF</a>
+              </div>
+              <div class="nav__submenu" id="solutions-detection">
+                <p class="nav__label">Fire Detection &amp; Alarm Systems &amp; Gas Detectors</p>
+                <a href="index.html#products">Fire Detection and Alarm Systems</a>
+                <a href="index.html#products">Gas Detectors (Solar blind)</a>
+              </div>
+              <div class="nav__submenu" id="solutions-voice">
+                <p class="nav__label">Public Address &amp; Emergency Voice Evacuation System</p>
+                <a href="index.html#products">Public Address System</a>
+                <a href="index.html#products">Emergency Voice Evacuation System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-infrared">
+                <p class="nav__label">Infrared Solar Detection</p>
+                <a href="index.html#products">Infrared Solar Detector</a>
+              </div>
+              <div class="nav__submenu" id="solutions-utility">
+                <p class="nav__label">Fuel Oil Handling System</p>
+                <a href="index.html#products">Fuel Oil Handling System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-passive">
+                <p class="nav__label">Low Pressure Piping</p>
+                <a href="index.html#products">Low Pressure Piping</a>
+              </div>
+              <div class="nav__submenu" id="solutions-portable">
+                <p class="nav__label">DCP System</p>
+                <a href="index.html#products">DCP System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-signage">
+                <p class="nav__label">Fire Door &amp; Passive Fire Protection System</p>
+                <a href="index.html#products">Fire Door</a>
+                <a href="index.html#products">Passive Fire Protection System</a>
+              </div>
+              <div class="nav__submenu" id="solutions-access">
+                <p class="nav__label">Emergency Lights &amp; Exit Signages</p>
+                <a href="index.html#products">Emergency Lights</a>
+                <a href="index.html#products">Exit Signages</a>
+              </div>
+              <div class="nav__submenu" id="solutions-a">
+                <p class="nav__label">Tube Suppression Systems</p>
+                <a href="index.html#products">Tube Suppression Systems</a>
+              </div>
+              <div class="nav__submenu" id="solutions-b">
+                <p class="nav__label">Fire Extinguishers</p>
+                <a href="index.html#products">Fire Extinguishers</a>
+              </div>
+              <div class="nav__submenu" id="solutions-c">
+                <p class="nav__label">Fire Curtains</p>
+                <a href="index.html#products">Fire Curtains</a>
+              </div>
+              <div class="nav__submenu" id="solutions-d">
+                <p class="nav__label">LHDC Systems</p>
+                <a href="index.html#products">Advance / Intelligent Temp. Heat Detection &amp; Monitoring</a>
+                <a href="index.html#products">Digital &amp; Resettable Type for coal conveyors and cable trays</a>
+              </div>
+              <div class="nav__submenu" id="solutions-e">
+                <p class="nav__label">Infrared Transit Heat Detectors</p>
+                <a href="index.html#products">Infrared Transit Heat Detectors for coal conveyor belts</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item"><a class="nav__trigger" href="index.html#industries">Industries</a></li>
+        <li class="nav__item"><a class="nav__trigger" href="index.html#services">Engineering &amp; Services</a></li>
+        <li class="nav__item"><a class="nav__trigger" href="clients.html">Clients</a></li>
+        <li class="nav__item"><a class="nav__trigger" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav__cta">
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="milestone-hero">
+      <div class="milestone-hero__content">
+        <p class="eyebrow">Milestones</p>
+        <h1>Fifty Years of Fire Engineering Firsts</h1>
+        <p>Through a dedicated team and a clear engineering mission, New Fire has implemented landmark technologies
+          across fire detection, suppression, protection, and special hazard systems.</p>
+        <div class="milestone-hero__stats">
+          <span><strong>50+</strong> years</span>
+          <span><strong>13</strong> landmark moments</span>
+          <span><strong>India + MEA</strong> project reach</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="milestone-journey" id="journey">
+      <aside class="milestone-journey__intro">
+        <p class="eyebrow">The Journey</p>
+        <h2>Innovation, scale, and safety leadership.</h2>
+        <p>Scroll through the moments that shaped New Fire's fire engineering legacy across refineries, power plants,
+          pipelines, metros, offshore facilities, and national safety programs.</p>
+      </aside>
+
+      <div class="milestone-timeline">
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">01</span>
+          <p class="milestone-card__tag">Networked Detection</p>
+          <h3>Largest Intelligent Networkable Fire Alarm Project</h3>
+          <p>Delivered OFC / IP based fire alarm and detection projects with HPCL, RFCL, EIL, Dangote Refinery, and
+            other critical industrial sites.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">02</span>
+          <p class="milestone-card__tag">Clean Agent Scale</p>
+          <h3>Largest Argonite Systems Order</h3>
+          <p>Secured major Argonite system orders for IOCL, GAIL, BCPL, and HMEL (HPCL), strengthening clean-agent
+            protection for high-value assets.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">03</span>
+          <p class="milestone-card__tag">India First</p>
+          <h3>Network Addressable Fire Detection at IOCL Panipat</h3>
+          <p>Implemented India's first and largest network addressable fire detection and alarm system at IOCL,
+            Panipat.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">04</span>
+          <p class="milestone-card__tag">Power Plants</p>
+          <h3>Fire Protection for Major Thermal Power Environments</h3>
+          <p>Executed fire protection for first and largest thermal power plant environments with NTPC, BHEL, and
+            Adani.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">05</span>
+          <p class="milestone-card__tag">Coal Conveyor Safety</p>
+          <h3>India's First Infrared Detection System</h3>
+          <p>Introduced India's first infrared detection system for coal conveyors at NTPC, Korba.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">06</span>
+          <p class="milestone-card__tag">Pipeline Protection</p>
+          <h3>World's Longest Jamnagar Loni Pipeline</h3>
+          <p>Delivered the entire fire protection package for the world's longest Jamnagar Loni Pipeline.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">07</span>
+          <p class="milestone-card__tag">Storage Tank Safety</p>
+          <h3>Specialized Floating Roof Tank Protection</h3>
+          <p>Introduced specialized fire protection systems for floating roof tanks and high-risk storage environments.
+          </p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">08</span>
+          <p class="milestone-card__tag">MVWS Scale</p>
+          <h3>India's Largest LPG Bullet Protection</h3>
+          <p>Implemented India's largest LPG bullet protection using MVWS systems.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">09</span>
+          <p class="milestone-card__tag">Environmental Shift</p>
+          <h3>UNDP Halon Phaseout Program</h3>
+          <p>Chosen by the United Nations Development Program for the Indian Halon Phaseout Program.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">10</span>
+          <p class="milestone-card__tag">Fine Water Mist</p>
+          <h3>India's First Fine Water Mist Transformer Protection</h3>
+          <p>Delivered India's first fine water mist system for transformer protection.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">11</span>
+          <p class="milestone-card__tag">Metro Infrastructure</p>
+          <h3>Delhi Metro Corridor 1 &amp; 2 Protection</h3>
+          <p>Completed fire suppression and protection across Corridor 1 and 2 for Delhi Metro, from conventional and
+            addressable detection to intelligent networked solutions.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">12</span>
+          <p class="milestone-card__tag">LP CO2 Systems</p>
+          <h3>Largest 8 Ton LP CO2 Gas Turbine Systems</h3>
+          <p>Delivered large LP CO2 systems for gas turbine applications at NTPC - DEPB Bawana and GSFC Hazira.</p>
+        </article>
+
+        <article class="milestone-card office-card-gsap">
+          <span class="milestone-card__number">13</span>
+          <p class="milestone-card__tag">International Reach</p>
+          <h3>Large Export Fire Systems</h3>
+          <p>Executed power plant, oil, and gas fire systems across the Middle East and Africa.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div>
+        <h3>NEWFIRE</h3>
+        <p>Integrated fire protection across design, engineering, installation, and maintenance.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+91 123 456 7890</p>
+        <p>sales@newfire.com</p>
+        <p>Plot 9, Industrial Estate, Pune</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="milestones.html">Milestones</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter">
+          <input type="email" placeholder="Work email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy; 2026 NEWFIRE. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
