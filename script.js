@@ -1,4 +1,33 @@
-gsap.registerPlugin(ScrollTrigger);
+const loadSharedComponents = async () => {
+  const [navbarResponse, footerResponse] = await Promise.all([
+    fetch('navbar.html'),
+    fetch('footer.html'),
+  ]);
+
+  if (!navbarResponse.ok || !footerResponse.ok) {
+    throw new Error('Unable to load shared navigation components.');
+  }
+
+  const navbarContainer = document.getElementById('navbar-container');
+  const footerContainer = document.getElementById('footer-container');
+
+  if (navbarContainer) navbarContainer.innerHTML = await navbarResponse.text();
+  if (footerContainer) footerContainer.innerHTML = await footerResponse.text();
+
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) return;
+
+  document.querySelectorAll('#navbar-container a[href^="#"], #footer-container a[href^="#"]').forEach((link) => {
+    link.href = `index.html${link.getAttribute('href')}`;
+  });
+};
+
+loadSharedComponents().then(() => {
+  // Initialize navbar scroll effects on all pages
+  if (typeof initializeNavbar === 'function') {
+    initializeNavbar();
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
 
 // =========================
 // HERO TYPING ANIMATION
@@ -39,124 +68,6 @@ if (dynamicText) {
 
   typeEffect();
 }
-
-// =========================
-// NAVIGATION
-// =========================
-const nav = document.getElementById('nav');
-const navLinks = document.getElementById('navLinks');
-const burger = document.getElementById('burger');
-const dropdownTriggers = document.querySelectorAll('.nav__trigger');
-const solutionParents = document.querySelectorAll('.nav__parent');
-const solutionSubmenus = document.querySelectorAll('.nav__submenu');
-const solutionPanel = document.querySelector('.nav__submenu-panel');
-const menuItemsWithDropdown = document.querySelectorAll('.nav__item--has-menu');
-
-const toggleNavSolid = () => {
-  if (window.scrollY > 60) {
-    nav.classList.add('nav-solid');
-  } else {
-    nav.classList.remove('nav-solid');
-  }
-};
-
-window.addEventListener('scroll', toggleNavSolid);
-toggleNavSolid();
-
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-navLinks.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A') navLinks.classList.remove('open');
-});
-
-const closeAllMenus = (except) => {
-  menuItemsWithDropdown.forEach((item) => {
-    if (item === except) return;
-    item.classList.remove('nav__item--open');
-    if (item.classList.contains('nav__item--solutions')) setActiveSolution(null);
-  });
-};
-
-dropdownTriggers.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-    if (!isMobile && btn.tagName === 'BUTTON') {
-      // On desktop, don't trap the click and prevent "sticking"
-      // CSS hover will handle the dropdown visibility
-      return; 
-    }
-    
-    if (btn.tagName === 'BUTTON' || isMobile) {
-      e.preventDefault();
-    }
-    
-    const parent = btn.closest('.nav__item--has-menu');
-    if (!parent) return;
-    
-    const isOpen = parent.classList.contains('nav__item--open');
-    closeAllMenus(parent);
-    parent.classList.toggle('nav__item--open', !isOpen);
-
-    const isSolutions = parent.classList.contains('nav__item--solutions');
-    if (isSolutions) {
-      if (!isOpen) {
-        const first = solutionParents[0];
-        if (!isMobile && first) setActiveSolution(first.dataset.target);
-        if (isMobile) setActiveSolution(null);
-      } else {
-        setActiveSolution(null);
-      }
-    }
-  });
-});
-
-document.addEventListener('click', (e) => {
-  const isMenu = e.target.closest('.nav');
-  if (!isMenu) closeAllMenus();
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeAllMenus();
-});
-
-const setActiveSolution = (targetId) => {
-  solutionParents.forEach((p) => p.classList.toggle('active', targetId && p.dataset.target === targetId));
-  solutionSubmenus.forEach((panel) => panel.classList.toggle('nav__submenu--active', targetId && panel.id === targetId));
-  if (solutionPanel) solutionPanel.classList.toggle('is-active', Boolean(targetId));
-};
-
-solutionParents.forEach((parent) => {
-  // Add mouseenter for desktop
-  parent.addEventListener('mouseenter', () => {
-    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-    if (!isMobile) {
-      setActiveSolution(parent.dataset.target);
-    }
-  });
-
-  parent.addEventListener('click', (e) => {
-    e.preventDefault();
-    setActiveSolution(parent.dataset.target);
-  });
-});
-
-const solutionsNavItem = document.querySelector('.nav__item--solutions');
-if (solutionsNavItem) {
-  solutionsNavItem.addEventListener('mouseenter', () => {
-    const inDesktop = window.matchMedia('(min-width: 1025px)').matches;
-    if (inDesktop) {
-      // Find if any is already active
-      const hasActive = Array.from(solutionParents).some(p => p.classList.contains('active'));
-      if (!hasActive) {
-        const first = solutionParents[0];
-        if (first) setActiveSolution(first.dataset.target);
-      }
-    }
-  });
-}
-
 
 // Hero intro
 const heroTl = gsap.timeline({ defaults: { ease: 'power2.out' } });
@@ -261,21 +172,6 @@ if (newsletter) {
     }, 2200);
   });
 }
-
-// Smooth scroll for nav links
-navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    closeAllMenus();
-  });
-});
 
 // ============================================
 // GSAP Animations for Service Cards
@@ -1497,13 +1393,120 @@ sectorCards.forEach(card => {
   card.addEventListener('click', () => {
     const isMobile = window.matchMedia('(max-width: 1024px)').matches;
     if (isMobile) {
-      // Toggle active class on mobile to reveal list
       card.classList.toggle('active');
-      
-      // Close other cards
       sectorCards.forEach(otherCard => {
         if (otherCard !== card) otherCard.classList.remove('active');
       });
     }
   });
 });
+
+// ============================================
+// WATER PROTECTION PAGE ANIMATIONS
+// ============================================
+const waterStories = document.querySelectorAll('.water-protection-story');
+waterStories.forEach((story) => {
+  const imgWrap = story.querySelector('.water-protection-story__image-wrap');
+  const copy = story.querySelector('.water-protection-story__copy');
+
+  if (imgWrap) {
+    gsap.from(imgWrap, {
+      scrollTrigger: { trigger: story, start: 'top 85%' },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  }
+
+  if (copy) {
+    gsap.from(copy, {
+      scrollTrigger: { trigger: story, start: 'top 85%' },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.15,
+      ease: 'power3.out'
+    });
+  }
+});
+
+const waterPanels = document.querySelectorAll('.water-protection-panel');
+waterPanels.forEach((panel, i) => {
+  gsap.from(panel, {
+    scrollTrigger: { trigger: panel, start: 'top 88%' },
+    y: 35,
+    opacity: 0,
+    duration: 0.7,
+    delay: (i % 2) * 0.1,
+    ease: 'power2.out'
+  });
+});
+
+// ============================================
+// FIRE DETECTION PAGE ANIMATIONS
+// ============================================
+const detectionStories = document.querySelectorAll('.detection-story');
+detectionStories.forEach((story) => {
+  const imgWrap = story.querySelector('.detection-story__image-wrap');
+  const copy = story.querySelector('.detection-story__copy');
+
+  if (imgWrap) {
+    gsap.from(imgWrap, {
+      scrollTrigger: { trigger: story, start: 'top 85%' },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  }
+
+  if (copy) {
+    gsap.from(copy, {
+      scrollTrigger: { trigger: story, start: 'top 85%' },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.15,
+      ease: 'power3.out'
+    });
+  }
+});
+
+// Animate .fd-reveal-left (slides in from left)
+document.querySelectorAll('.fd-reveal-left').forEach((el) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%' },
+    x: -50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out'
+  });
+});
+
+// Animate .fd-reveal-right (slides in from right)
+document.querySelectorAll('.fd-reveal-right').forEach((el) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%' },
+    x: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out'
+  });
+});
+
+// Animate .fd-reveal-up (slides up softly)
+document.querySelectorAll('.fd-reveal-up').forEach((el) => {
+  gsap.from(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%' },
+    y: 35,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out'
+  });
+});
+});
+
+
+
+
